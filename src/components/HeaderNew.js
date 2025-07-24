@@ -6,18 +6,10 @@ import Link from 'next/link'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate scroll progress
-      const scrollTop = window.scrollY
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = (scrollTop / documentHeight) * 100
-      setScrollProgress(progress)
-
-      // Update active section
-      const sections = ['hero', 'practice-areas', 'team', 'insights', 'about']
+      const sections = ['hero', 'about', 'practice-areas', 'team', 'insights', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -34,23 +26,14 @@ export default function Header() {
   }, [])
 
   return (
-    <>
-      {/* Scroll Progress Bar */}
-      <div 
-        className="scroll-progress-bar"
-        style={{ transform: `scaleX(${scrollProgress / 100})` }}
-      />
-      
-      <header className="nav-professional sticky top-0 z-30">
+    <header className="nav-professional sticky top-0 z-30">
       <div className="container-max">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src="/Logo.jpg" 
-              alt="Aequitas Law Partners" 
-              className="h-12 w-auto object-contain"
-            />
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded flex items-center justify-center">
+              <div className="text-white font-bold text-lg">A</div>
+            </div>
             <div>
               <div className="font-bold text-xl text-gray-900">Aequitas Law Partners</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">Legal Excellence</div>
@@ -60,30 +43,46 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
-              href="#practice-areas" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+              href="#about" 
+              className={`professional-link text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
             >
-              Expertise
+              About
+            </Link>
+            <Link 
+              href="#practice-areas" 
+              className={`professional-link text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+            >
+              Practice Areas
             </Link>
             <Link 
               href="#team" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'team' ? 'nav-link-active' : ''}`}
+              className={`professional-link text-sm font-medium ${activeSection === 'team' ? 'nav-link-active' : ''}`}
             >
-              People
+              Team
             </Link>
             <Link 
               href="#insights" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
+              className={`professional-link text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
             >
-              Thought Leadership
+              Insights
             </Link>
             <Link 
-              href="#about" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
+              href="#contact" 
+              className={`professional-link text-sm font-medium ${activeSection === 'contact' ? 'nav-link-active' : ''}`}
             >
-              Legacy
+              Contact
             </Link>
           </nav>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Link 
+              href="#contact" 
+              className="btn-primary inline-block"
+            >
+              Get Legal Counsel
+            </Link>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -100,15 +99,16 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link href="#practice-areas" className="professional-link text-sm font-medium">Expertise</Link>
-              <Link href="#team" className="professional-link text-sm font-medium">People</Link>
-              <Link href="#insights" className="professional-link text-sm font-medium">Thought Leadership</Link>
-              <Link href="#about" className="professional-link text-sm font-medium">Legacy</Link>
+              <Link href="#about" className="professional-link text-sm font-medium">About</Link>
+              <Link href="#practice-areas" className="professional-link text-sm font-medium">Practice Areas</Link>
+              <Link href="#team" className="professional-link text-sm font-medium">Team</Link>
+              <Link href="#insights" className="professional-link text-sm font-medium">Insights</Link>
+              <Link href="#contact" className="professional-link text-sm font-medium">Contact</Link>
+              <Link href="#contact" className="btn-primary inline-block mt-4">Get Legal Counsel</Link>
             </div>
           </div>
         )}
       </div>
     </header>
-    </>
   )
 }

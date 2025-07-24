@@ -1,4 +1,13 @@
+'use client'
+
+import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation'
+
 export default function Insights() {
+  const [headerRef, headerVisible] = useScrollAnimation()
+  const { setRef: setFeaturedRef, isVisible: isFeaturedVisible } = useStaggeredAnimation(2, { delay: 150 })
+  const { setRef: setArticleRef, isVisible: isArticleVisible } = useStaggeredAnimation(4, { delay: 100 })
+  const [ctaRef, ctaVisible] = useScrollAnimation()
+
   const insights = [
     {
       title: "Navigating India's New Data Protection Laws",
@@ -50,51 +59,35 @@ export default function Insights() {
     }
   ]
 
-  const events = [
-    {
-      title: "Corporate Law Summit 2025",
-      date: "August 15, 2025",
-      location: "Mumbai",
-      type: "Conference"
-    },
-    {
-      title: "Startup Legal Workshop",
-      date: "August 10, 2025",
-      location: "Bangalore",
-      type: "Workshop"
-    },
-    {
-      title: "IP Law Roundtable",
-      date: "August 5, 2025",
-      location: "Delhi",
-      type: "Roundtable"
-    }
-  ]
-
   return (
     <section id="insights" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-            Insights & Resources
+        <div ref={headerRef} className="text-center mb-16">
+          <h2 className={`text-4xl lg:text-5xl font-bold text-blue-900 mb-6 scroll-reveal ${headerVisible ? 'visible' : ''}`}>
+            Thought Leadership
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className={`text-xl text-gray-600 max-w-3xl mx-auto scroll-text ${headerVisible ? 'visible' : ''}`}
+             style={{ transitionDelay: headerVisible ? '0.1s' : '0s' }}>
             Stay informed with our latest legal insights, industry analysis, and thought leadership on key developments
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto">
           {/* Featured Articles */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-blue-900 mb-8">Latest Insights</h3>
+          <div>
+            <h3 className={`text-2xl font-bold text-blue-900 mb-8 text-center scroll-text ${headerVisible ? 'visible' : ''}`}
+                style={{ transitionDelay: headerVisible ? '0.2s' : '0s' }}>
+              Latest Insights
+            </h3>
             
             {/* Featured Articles Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {insights.filter(insight => insight.featured).map((insight, index) => (
                 <article 
                   key={index}
-                  className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group"
+                  ref={setFeaturedRef(index)}
+                  className={`bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group scroll-card ${isFeaturedVisible(index) ? 'visible' : ''}`}
                 >
                   <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                     <svg className="w-16 h-16 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -130,7 +123,8 @@ export default function Insights() {
               {insights.filter(insight => !insight.featured).map((insight, index) => (
                 <article 
                   key={index}
-                  className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors group"
+                  ref={setArticleRef(index)}
+                  className={`border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors group scroll-slide-left ${isArticleVisible(index) ? 'visible' : ''}`}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -156,85 +150,13 @@ export default function Insights() {
               ))}
             </div>
 
-            <div className="text-center mt-8">
+            <div ref={ctaRef} className={`text-center mt-8 scroll-fade ${ctaVisible ? 'visible' : ''}`}>
               <a 
                 href="/insights"
                 className="bg-blue-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors inline-block"
               >
                 View All Insights
               </a>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Newsletter Signup */}
-            <div className="bg-blue-900 text-white p-8 rounded-2xl">
-              <h4 className="text-xl font-bold mb-4">Stay Updated</h4>
-              <p className="text-blue-200 mb-6 text-sm">
-                Subscribe to our newsletter for the latest legal insights and industry updates.
-              </p>
-              <div className="space-y-4">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-                <button className="w-full bg-yellow-500 text-blue-900 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-
-            {/* Upcoming Events */}
-            <div className="bg-gray-50 p-8 rounded-2xl">
-              <h4 className="text-xl font-bold text-blue-900 mb-6">Upcoming Events</h4>
-              <div className="space-y-4">
-                {events.map((event, index) => (
-                  <div key={index} className="border-l-4 border-blue-600 pl-4">
-                    <h5 className="font-semibold text-blue-900">{event.title}</h5>
-                    <p className="text-sm text-gray-600">{event.date}</p>
-                    <p className="text-sm text-gray-600">{event.location} • {event.type}</p>
-                  </div>
-                ))}
-              </div>
-              <button className="w-full mt-6 bg-blue-100 text-blue-900 py-2 rounded-lg font-medium hover:bg-blue-200 transition-colors">
-                View All Events
-              </button>
-            </div>
-
-            {/* Download Resources */}
-            <div className="bg-white border-2 border-gray-200 p-8 rounded-2xl">
-              <h4 className="text-xl font-bold text-blue-900 mb-6">Legal Resources</h4>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <h6 className="font-medium text-gray-900">Startup Legal Guide</h6>
-                    <p className="text-xs text-gray-600">PDF • 2.5 MB</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <h6 className="font-medium text-gray-900">M&A Checklist</h6>
-                    <p className="text-xs text-gray-600">PDF • 1.8 MB</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <h6 className="font-medium text-gray-900">IP Protection Guide</h6>
-                    <p className="text-xs text-gray-600">PDF • 3.2 MB</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

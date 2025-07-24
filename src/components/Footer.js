@@ -7,10 +7,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              {/* Mountain-inspired logo */}
-              <div className="w-10 h-10 bg-gradient-to-t from-yellow-500 to-yellow-400 transform rotate-45 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-gradient-to-t from-blue-800 to-blue-600 transform -rotate-45 rounded-sm"></div>
-              </div>
+              <img 
+                src="/Logo.jpg" 
+                alt="Aequitas Law Partners" 
+                className="h-12 w-auto object-contain"
+              />
               <div>
                 <h3 className="text-xl font-bold">Aequitas Law Partners</h3>
                 <p className="text-blue-300 text-sm">ALP</p>
@@ -57,23 +58,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Newsletter */}
+          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Stay Connected</h4>
+            <h4 className="text-lg font-bold mb-6">Contact Information</h4>
             <div className="space-y-4 mb-6">
               <div>
-                <h5 className="font-medium text-white mb-2">Subscribe to Newsletter</h5>
-                <p className="text-blue-300 text-sm mb-4">Get latest legal insights and updates</p>
-                <div className="flex">
-                  <input 
-                    type="email" 
-                    placeholder="Your email"
-                    className="flex-1 px-3 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  />
-                  <button className="bg-yellow-500 text-blue-900 px-4 py-2 rounded-r-lg font-medium hover:bg-yellow-400 transition-colors">
-                    Subscribe
-                  </button>
-                </div>
+                <p className="text-blue-300 text-sm mb-2">Mumbai Office</p>
+                <p className="text-white text-sm">Business Address Line 1</p>
+                <p className="text-white text-sm">Mumbai, Maharashtra</p>
+              </div>
+              <div>
+                <p className="text-blue-300 text-sm mb-2">Email</p>
+                <p className="text-white text-sm">info@alplaw.in</p>
               </div>
             </div>
 

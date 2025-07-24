@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
         <meta name="coverage" content="India" />
         <meta name="target" content="Corporate Clients, Startups, Entrepreneurs" />
       </head>
-      <body className={`${inter.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} antialiased font-sans smooth-scroll gpu-accelerated`}>
         {children}
       </body>
     </html>
