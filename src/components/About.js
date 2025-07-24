@@ -81,7 +81,7 @@ export default function About() {
             <div 
               className={`h-96 lg:h-[500px] bg-cover bg-center rounded-lg shadow-lg scroll-slide-right rich-card gpu-accelerated ${imageVisible ? 'visible' : ''}`}
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2940&q=80')`
+                backgroundImage: `url('https://images.unsplash.com/photo-1491986981770-cb1eee867c54?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
               }}
               data-scale="1.05"
               data-parallax="0.1">

@@ -43,42 +43,44 @@ export default function Header() {
       
       <header className="nav-professional sticky top-0 z-30">
       <div className="container-max">
-        <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+        <div className="flex items-center justify-between lg:justify-between py-4">
+          {/* Logo - image visible on all devices, text hidden on mobile */}
+          <Link 
+            href="/" 
+            className="flex items-center space-x-3"
+          >
             <img 
               src="/Logo.jpg" 
               alt="Aequitas Law Partners" 
-              className="h-12 w-auto object-contain"
+              className="h-24 lg:w-auto object-contain"
             />
-            <div>
+            <div className="hidden md:block">
               <div className="font-bold text-xl text-gray-900">Aequitas Law Partners</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">Legal Excellence</div>
             </div>
           </Link>
-
-          {/* Desktop Navigation */}
+          
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
-              href="#practice-areas" 
+              href="/#practice-areas" 
               className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
             >
               Expertise
             </Link>
             <Link 
-              href="#team" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'team' ? 'nav-link-active' : ''}`}
+              href="/people" 
+              className="professional-link nav-link-animation text-sm font-medium"
             >
               People
             </Link>
             <Link 
-              href="#insights" 
+              href="/#insights" 
               className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
             >
               Thought Leadership
             </Link>
             <Link 
-              href="#about" 
+              href="/#about" 
               className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
             >
               Legacy
@@ -99,11 +101,11 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              <Link href="#practice-areas" className="professional-link text-sm font-medium">Expertise</Link>
-              <Link href="#team" className="professional-link text-sm font-medium">People</Link>
-              <Link href="#insights" className="professional-link text-sm font-medium">Thought Leadership</Link>
-              <Link href="#about" className="professional-link text-sm font-medium">Legacy</Link>
+            <div className="flex flex-col space-y-4 items-end">
+              <Link href="/#practice-areas" className="professional-link text-sm font-medium">Expertise</Link>
+              <Link href="/people" className="professional-link text-sm font-medium">People</Link>
+              <Link href="/#insights" className="professional-link text-sm font-medium">Thought Leadership</Link>
+              <Link href="/#about" className="professional-link text-sm font-medium">Legacy</Link>
             </div>
           </div>
         )}

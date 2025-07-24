@@ -10,12 +10,12 @@ export default function Footer() {
               <img 
                 src="/Logo.jpg" 
                 alt="Aequitas Law Partners" 
-                className="h-12 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
-              <div>
+              {/* <div>
                 <h3 className="text-xl font-bold">Aequitas Law Partners</h3>
                 <p className="text-blue-300 text-sm">ALP</p>
-              </div>
+              </div> */}
             </div>
             <p className="text-blue-200 mb-6 leading-relaxed">
               Elevating justice in business through equity, fairness, and strategic legal counsel. 
@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Practice Areas */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Practice Areas</h4>
+            <h4 className="text-lg font-bold mb-6 text-blue-200">Practice Areas</h4>
             <ul className="space-y-3 text-blue-200">
               <li><a href="#" className="hover:text-white transition-colors">Corporate Law & M&A</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Startup & Venture Capital</a></li>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-6 text-blue-200">Quick Links</h4>
             <ul className="space-y-3 text-blue-200">
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#team" className="hover:text-white transition-colors">Our Team</a></li>
@@ -60,7 +60,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Contact Information</h4>
+            <h4 className="text-lg font-bold mb-6 text-blue-200">Contact Information</h4>
             <div className="space-y-4 mb-6">
               <div>
                 <p className="text-blue-300 text-sm mb-2">Mumbai Office</p>
