@@ -51,23 +51,13 @@ export default function PracticeAreas() {
               </div>
               
               {/* Content */}
-              <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col flex-grow">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-white mb-2 sm:mb-3 transition-all duration-700 transform group-hover:translate-y-1">
+              <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-white mb-3 transition-all duration-700 transform group-hover:translate-y-1">
                   {area.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-100 mb-3 sm:mb-4 leading-relaxed transition-all duration-700 delay-100 flex-grow">
-                  {area.description}
-                </p>
                 
-                {/* Services */}
-                <ul className="professional-list text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 mb-3 sm:mb-4 transition-all duration-700 delay-150 min-h-[100px] sm:min-h-[120px]">
-                  {area.services.map((service, serviceIndex) => (
-                    <li key={serviceIndex} className="transform group-hover:translate-x-1 transition-transform duration-500 mb-1" style={{transitionDelay: `${serviceIndex * 50}ms`}}>{service}</li>
-                  ))}
-                </ul>
-                
-                <div className="flex justify-between items-center mt-auto">
-                  <button className="text-primary-900 group-hover:text-white font-medium text-xs sm:text-sm transition-all duration-700 delay-200 transform group-hover:translate-x-2 group-hover:scale-110">
+                <div>
+                  <button className="text-primary-900 group-hover:text-white font-medium text-sm transition-all duration-700 delay-200 transform group-hover:translate-x-2 group-hover:scale-110">
                     Learn More →
                   </button>
                 </div>
