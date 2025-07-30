@@ -34,33 +34,42 @@ export const practiceAreasData = [
   {
     id: "private-equity-venture-capital",
     title: "Private Equity and Venture Capital",
-    description: "Expert guidance on PE/VC transactions, fund formation, and investment structures for emerging and established businesses.",
+    description: "India continues to be a key destination for private equity (PE) and venture capital (VC) investments, driven by ongoing economic liberalization, a vibrant start-up ecosystem, and strong investor confidence.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    services: ["Fund Formation", "Investment Documentation", "Due Diligence", "Exit Strategies"],
-    overview: "Our Private Equity and Venture Capital practice serves fund managers, institutional investors, and portfolio companies across the investment lifecycle. We provide strategic legal counsel on fund formation, investment transactions, and exit strategies.",
+    services: ["Strategic Investment Structuring", "Term Sheet Advisory", "Legal Due Diligence", "Regulatory & Compliance Support", "Transaction Documentation", "Closing & Post-Closing Support"],
+    overview: "Our dedicated PE & VC team combines deep industry insight with a stellar track record advising both domestic and international funds, as well as investee companies, from pioneering start-up ventures to established corporations across diverse sectors. We leverage our legal expertise and market knowledge to deliver innovative, strategically aligned counsel at every point in the investment lifecycle. Our dedicated PE & VC team seamlessly integrates deep legal and regulatory expertise with nuanced insights across diverse sectors. We adeptly navigate complex investment transactions at every stage, from term sheet to exit delivering strategic, business-aligned legal counsel tailored to our clients' objectives and sector-specific challenges.",
     keyServices: [
       {
-        title: "Fund Formation",
-        description: "Structuring and establishing private equity and venture capital funds with optimal legal frameworks."
+        title: "Strategic Investment Structuring",
+        description: "Advising on optimal investment structures in compliance with current laws, regulatory guidelines, and market practices."
       },
       {
-        title: "Investment Documentation",
-        description: "Comprehensive documentation for investment transactions, term sheets, and shareholder agreements."
+        title: "Term Sheet Advisory",
+        description: "Drafting, reviewing, and negotiating term sheets aligned with the strategic intent of all stakeholders."
       },
       {
-        title: "Due Diligence",
-        description: "Thorough legal due diligence for investment opportunities and portfolio companies."
+        title: "Legal Due Diligence",
+        description: "Conducting comprehensive legal and corporate due diligence across sectors and jurisdictions, identifying legal risks and recommending effective mitigation strategies."
       },
       {
-        title: "Exit Strategies",
-        description: "Strategic planning and execution of exit transactions including IPOs, trade sales, and secondary buyouts."
+        title: "Regulatory & Compliance Support",
+        description: "Advising on legal and regulatory requirements, assisting in securing necessary approvals, and representing clients before authorities like RBI, SEBI, and others."
+      },
+      {
+        title: "Transaction Documentation",
+        description: "Drafting, reviewing, and negotiating key transaction documents, including Share Subscription Agreements, Shareholders' Agreements, Share Purchase Agreements, IP assignment agreements, employment contracts, charter documents, and related agreements."
+      },
+      {
+        title: "Closing & Post-Closing Support",
+        description: "Assisting with disclosure schedules, compliance with conditions precedent, closing formalities, and post-transaction implementation."
       }
     ],
     expertise: [
-      "Series A to late-stage funding rounds",
+      "End-to-end legal support on PE & VC transactions",
+      "Representing both investors and investee companies",
       "Cross-border investment structures",
-      "SEBI and regulatory compliance",
-      "Portfolio company governance"
+      "Strategic, commercial, and legal deal insights",
+      "Solutions-driven approach with balanced representation"
     ]
   },
   {
