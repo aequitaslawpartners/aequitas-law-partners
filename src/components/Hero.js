@@ -34,7 +34,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/peak.gif')`,
+          backgroundImage: `url('/peak2.gif')`,
           transform: `translateY(${scrollY * 0.5}px)`,
           opacity: 0.8
         }}
