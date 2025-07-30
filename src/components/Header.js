@@ -56,56 +56,56 @@ export default function Header() {
             />
             {/* <div className="hidden md:block">
               <div className="font-bold text-xl text-gray-900">Aequitas Law Partners</div>
-              <div className="text-sm text-gray-600 uppercase tracking-wide">Legal Excellence</div>
+              <div className="text-base text-gray-600 uppercase tracking-wide">Legal Excellence</div>
             </div> */}
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
               href="/#practice-areas" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
             >
               Expertise
             </Link>
             <Link 
               href="/people" 
-              className="professional-link nav-link-animation text-sm font-medium"
+              className="professional-link nav-link-animation text-base font-medium"
             >
               People
             </Link>
             <Link 
               href="/#insights" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
             >
               Thought Leadership
             </Link>
             <Link 
               href="/#about" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
             >
               Legacy
             </Link>
             <Link 
               href="/#practice-areas" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
             >
               Expertise
             </Link>
             <Link 
               href="/people" 
-              className="professional-link nav-link-animation text-sm font-medium"
+              className="professional-link nav-link-animation text-base font-medium"
             >
               People
             </Link>
             <Link 
               href="/#insights" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
             >
               Thought Leadership
             </Link>
             <Link 
               href="/#about" 
-              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
+              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
             >
               Legacy
             </Link>
@@ -126,10 +126,10 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 items-end">
-              <Link href="/#practice-areas" className="professional-link text-sm font-medium">Expertise</Link>
-              <Link href="/people" className="professional-link text-sm font-medium">People</Link>
-              <Link href="/#insights" className="professional-link text-sm font-medium">Thought Leadership</Link>
-              <Link href="/#about" className="professional-link text-sm font-medium">Legacy</Link>
+              <Link href="/#practice-areas" className="professional-link text-base font-medium">Expertise</Link>
+              <Link href="/people" className="professional-link text-base font-medium">People</Link>
+              <Link href="/#insights" className="professional-link text-base font-medium">Thought Leadership</Link>
+              <Link href="/#about" className="professional-link text-base font-medium">Legacy</Link>
             </div>
           </div>
         )}
