@@ -53,7 +53,7 @@ export default function PersonPage({ params }) {
                 </div>
               </div>
               <div className="lg:col-span-1">
-                <div className="relative">
+                <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
                   <img
                     src={person.image}
                     alt={person.name}
