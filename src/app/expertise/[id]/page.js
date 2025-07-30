@@ -7,6 +7,8 @@ import Banner from '@/components/Banner'
 import { practiceAreasData } from '@/data/practiceAreas'
 import Link from 'next/link'
 
+
+
 export default function PracticeAreaDetailPage() {
   const params = useParams()
   const practiceArea = practiceAreasData.find(area => area.id === params.id)
