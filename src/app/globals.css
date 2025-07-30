@@ -14,8 +14,8 @@
 /* Professional Color Palette */
 :root {
   --color-primary: #0c3065;      /* Deep Navy Blue */
-  --color-secondary: #2c5282;    /* Medium Blue */
-  --color-accent: #b8860b;       /* Dark Goldenrod */
+  --color-secondary: #247dbc;    /* Medium Blue */
+  --color-neutral: #b3b3b3;      /* Light Gray */
   --color-light: #f7fafc;        /* Very Light Gray */
   --color-text: #2d3748;         /* Dark Gray */
   --color-text-light: #4a5568;   /* Medium Gray */

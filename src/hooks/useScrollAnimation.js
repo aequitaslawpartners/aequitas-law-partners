@@ -14,7 +14,7 @@ export function useScrollAnimation(options = {}) {
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -100px 0px'
+        rootMargin: options.rootMargin || '0px 0px -20px 0px'
       }
     )
 
@@ -70,7 +70,7 @@ export function useStaggeredAnimation(count, options = {}) {
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -50px 0px'
+        rootMargin: options.rootMargin || '0px 0px -20px 0px'
       }
     )
 

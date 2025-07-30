@@ -15,8 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <PracticeAreas />
-        <TeamSlider />
-        <Insights />
+        {/* <TeamSlider /> */}
         <About />
       </main>
       <Footer />

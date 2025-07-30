@@ -17,7 +17,7 @@ export default function Header() {
       setScrollProgress(progress)
 
       // Update active section
-      const sections = ['hero', 'practice-areas', 'team', 'insights', 'about']
+      const sections = ['hero', 'about', 'expertise', 'people', 'publications', 'awards', 'careers', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -62,8 +62,14 @@ export default function Header() {
           
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
-              href="/#practice-areas" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+              href="/about" 
+              className="professional-link nav-link-animation text-base font-medium"
+            >
+              About Us
+            </Link>
+            <Link 
+              href="/expertise" 
+              className="professional-link nav-link-animation text-base font-medium"
             >
               Expertise
             </Link>
@@ -74,40 +80,28 @@ export default function Header() {
               People
             </Link>
             <Link 
-              href="/#insights" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
-            >
-              Thought Leadership
-            </Link>
-            <Link 
-              href="/#about" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
-            >
-              Legacy
-            </Link>
-            <Link 
-              href="/#practice-areas" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
-            >
-              Expertise
-            </Link>
-            <Link 
-              href="/people" 
+              href="/publications" 
               className="professional-link nav-link-animation text-base font-medium"
             >
-              People
+              Publications
             </Link>
             <Link 
-              href="/#insights" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
+              href="/awards" 
+              className="professional-link nav-link-animation text-base font-medium"
             >
-              Thought Leadership
+              Awards and Recognitions
             </Link>
             <Link 
-              href="/#about" 
-              className={`professional-link nav-link-animation text-base font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
+              href="/careers" 
+              className="professional-link nav-link-animation text-base font-medium"
             >
-              Legacy
+              Careers
+            </Link>
+            <Link 
+              href="/contact" 
+              className="professional-link nav-link-animation text-base font-medium"
+            >
+              Contact Us
             </Link>
           </nav>
 
@@ -126,10 +120,13 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 items-end">
-              <Link href="/#practice-areas" className="professional-link text-base font-medium">Expertise</Link>
+              <Link href="/about" className="professional-link text-base font-medium">About Us</Link>
+              <Link href="/expertise" className="professional-link text-base font-medium">Expertise</Link>
               <Link href="/people" className="professional-link text-base font-medium">People</Link>
-              <Link href="/#insights" className="professional-link text-base font-medium">Thought Leadership</Link>
-              <Link href="/#about" className="professional-link text-base font-medium">Legacy</Link>
+              <Link href="/publications" className="professional-link text-base font-medium">Publications</Link>
+              <Link href="/awards" className="professional-link text-base font-medium">Awards and Recognitions</Link>
+              <Link href="/careers" className="professional-link text-base font-medium">Careers</Link>
+              <Link href="/contact" className="professional-link text-base font-medium">Contact Us</Link>
             </div>
           </div>
         )}
