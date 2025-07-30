@@ -3,8 +3,8 @@ export default function Banner() {
     <div className="banner">
       <div className="container-max">
         <p className="m-0 text-center">
-          <strong>Excellence in Legal Counsel</strong> • Facilitating Commercial Legal Solutions • 
-          <span className="ml-2">Shaping India's Legal Discourse</span>
+          <strong>Precision</strong> • Innovation  •
+          <span className="ml-2">Equity</span>
         </p>
       </div>
     </div>
