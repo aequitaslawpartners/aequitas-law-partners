@@ -48,17 +48,17 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Theme color */}
-        <meta name="theme-color" content="#1e40af" />
-        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="theme-color" content="#0c3065" />
+        <meta name="msapplication-TileColor" content="#0c3065" />
         
         {/* Additional SEO tags */}
         <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="Mumbai, Delhi, Bangalore" />
+        <meta name="geo.placename" content="Mumbai" />
         <meta name="industry" content="Legal Services" />
         <meta name="coverage" content="India" />
         <meta name="target" content="Corporate Clients, Startups, Entrepreneurs" />
       </head>
-      <body className={`${inter.variable} antialiased font-sans smooth-scroll gpu-accelerated`}>
+      <body className={`${inter.variable} antialiased smooth-scroll gpu-accelerated`}>
         {children}
       </body>
     </html>

@@ -85,6 +85,30 @@ export default function Header() {
             >
               Legacy
             </Link>
+            <Link 
+              href="/#practice-areas" 
+              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'practice-areas' ? 'nav-link-active' : ''}`}
+            >
+              Expertise
+            </Link>
+            <Link 
+              href="/people" 
+              className="professional-link nav-link-animation text-sm font-medium"
+            >
+              People
+            </Link>
+            <Link 
+              href="/#insights" 
+              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'insights' ? 'nav-link-active' : ''}`}
+            >
+              Thought Leadership
+            </Link>
+            <Link 
+              href="/#about" 
+              className={`professional-link nav-link-animation text-sm font-medium ${activeSection === 'about' ? 'nav-link-active' : ''}`}
+            >
+              Legacy
+            </Link>
           </nav>
 
           {/* Mobile menu button */}

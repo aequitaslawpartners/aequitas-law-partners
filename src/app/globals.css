@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font - Athelas Bold */
+@font-face {
+  font-family: 'Athelas Bold';
+  src: url('/Athelas-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Professional Color Palette */
 :root {
-  --color-primary: #1a365d;      /* Deep Navy Blue */
+  --color-primary: #0c3065;      /* Deep Navy Blue */
   --color-secondary: #2c5282;    /* Medium Blue */
   --color-accent: #b8860b;       /* Dark Goldenrod */
   --color-light: #f7fafc;        /* Very Light Gray */
@@ -14,7 +23,7 @@
 
 /* Base Typography */
 body {
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Athelas Bold', var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
   color: var(--color-text);
   line-height: 1.6;
   background: white;

@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
 
           {/* Bar Council Disclaimer */}
-          <div className="mt-6 pt-6 border-t border-blue-800">
+          {/* <div className="mt-6 pt-6 border-t border-blue-800">
             <div className="bg-blue-800 p-4 rounded-lg">
               <p className="text-xs text-blue-200 leading-relaxed">
                 <strong>Disclaimer:</strong> This website is in compliance with the Bar Council of India rules. 
@@ -131,7 +131,7 @@ export default function Footer() {
                 The firm shall not be liable for consequences of any action taken based on the information provided on this website.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

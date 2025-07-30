@@ -35,6 +35,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        athelas: ['Athelas Bold', 'serif'],
+        primary: ['Athelas Bold', 'var(--font-inter)', 'Inter', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

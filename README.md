@@ -7,8 +7,8 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 **Aequitas** (Latin for equity, justice, fairness, and symmetry) represents our core philosophy. The mountain/alpine theme throughout the design symbolizes grandness, boldness, and our vision to reach new heights in legal excellence.
 
 - **Domain**: [www.alplaw.in](https://www.alplaw.in)
-- **Founded**: 2004
-- **Offices**: Mumbai (Head Office), New Delhi, Bangalore
+- **Founded**: 2025
+- **Offices**: Mumbai (Head Office)
 - **Mission**: Elevating justice in business through strategic legal counsel
 
 ## 🚀 Technology Stack
@@ -16,16 +16,16 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 - **Framework**: Next.js 15 with App Router
 - **Language**: JavaScript (ES6+)
 - **Styling**: Tailwind CSS
-- **Font**: Inter (Google Fonts)
+- **Font**: Athelas
 - **Build Tool**: Turbopack
 - **Package Manager**: npm
 
 ## 🎨 Design Features
 
 ### Brand Identity
-- **Primary Colors**: Deep blue (#1e40af) and gold accents (#f59e0b)
+- **Primary Colors**: Deep blue (#0c3065)
 - **Logo**: Mountain-inspired geometric design representing "ALP"
-- **Typography**: Modern Inter font family for professional appearance
+- **Typography**: Modern Inter Athelas family for professional appearance
 - **Theme**: Alpine/mountain motif throughout the design
 
 ### Key Sections
@@ -40,7 +40,7 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn package manager
+- npm package manager
 
 ### Local Development
 
@@ -52,12 +52,6 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 2. **Start the development server**:
    ```bash
    npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
    ```
 
 3. **Open your browser** and navigate to:
@@ -88,8 +82,6 @@ src/
 │   ├── Insights.js          # Legal insights & resources
 │   ├── Contact.js           # Contact form & office info
 │   └── Footer.js            # Footer with links
-└── .github/
-    └── copilot-instructions.md  # Development guidelines
 ```
 
 ## 🎯 Key Features
@@ -97,7 +89,7 @@ src/
 ### Professional Design
 - Clean, modern layout suitable for corporate clients
 - Mountain-themed visual elements
-- Professional color scheme (blue/gold)
+- Professional color scheme (blue)
 - High-quality typography
 
 ### Content Management
@@ -130,22 +122,6 @@ src/
 8. **Employment & Labor** - Workplace law and compliance
 9. **Tax & Regulatory** - Government relations and compliance
 
-## 🏢 Office Locations
-
-### Mumbai (Head Office)
-1201, 12th Floor, Peninsula Corporate Park  
-GK Marg, Lower Parel, Mumbai - 400013  
-📞 +91 22 6789 1000
-
-### New Delhi
-Suite 801, World Trade Tower  
-Barakhamba Lane, Connaught Place, New Delhi - 110001  
-📞 +91 11 4567 2000
-
-### Bangalore
-Floor 15, UB City Tower  
-Vittal Mallya Road, Bangalore - 560001  
-📞 +91 80 3456 7000
 
 ## 🚀 Deployment
 
@@ -174,12 +150,6 @@ npm run build
 - High contrast color scheme
 - Screen reader compatibility
 
-## 📞 Contact Information
-
-**General Inquiries**: info@alplaw.in  
-**Business Development**: business@alplaw.in  
-**Careers**: careers@alplaw.in  
-**24/7 Emergency**: +91 98765 43210
 
 ## 📄 Legal Compliance
 
