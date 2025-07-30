@@ -23,15 +23,19 @@ export default function PracticeAreas() {
         
 
         {/* Practice Areas Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 relative">
           {practiceAreas.map((area, index) => (
-            <div 
+            <Link 
               key={index}
-              ref={setRef(index)}
-              className={`bg-white rounded-lg shadow-lg overflow-hidden rich-card magnetic-element scroll-card gpu-accelerated relative group transition-all duration-700 hover:shadow-2xl hover:scale-105 ${isVisible(index) ? 'visible' : ''}`}
-              data-scale="1.02"
-              data-parallax="0.02"
+              href={`/expertise/${area.id}`}
+              className="group"
             >
+              <div 
+                ref={setRef(index)}
+                className={`bg-white rounded-lg shadow-lg overflow-hidden rich-card magnetic-element scroll-card gpu-accelerated relative cursor-pointer transition-all duration-700 hover:shadow-2xl sm:hover:scale-105 h-full flex flex-col ${isVisible(index) ? 'visible' : ''}`}
+                data-scale="1.02"
+                data-parallax="0.02"
+              >
               {/* Animated gradient overlay that expands from top-right */}
               <div className="absolute inset-0 bg-gradient-to-bl from-primary-900 via-blue-700 to-blue-500 opacity-0 group-hover:opacity-95 transition-all duration-700 ease-out transform scale-0 group-hover:scale-110 origin-top-right rounded-lg z-10"></div>
               
@@ -39,7 +43,7 @@ export default function PracticeAreas() {
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 z-20"></div>
               {/* Image */}
               <div 
-                className="h-48 bg-cover bg-center relative overflow-hidden z-30" 
+                className="h-40 sm:h-48 lg:h-52 bg-cover bg-center relative overflow-hidden z-30" 
                 style={{ backgroundImage: `url(${area.image})` }}
                 data-scale="1.1"
               >
@@ -47,28 +51,29 @@ export default function PracticeAreas() {
               </div>
               
               {/* Content */}
-              <div className="p-6 depth-layer-1 relative z-30">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-3 transition-all duration-700 transform group-hover:translate-y-1">
+              <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col flex-grow">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-white mb-2 sm:mb-3 transition-all duration-700 transform group-hover:translate-y-1">
                   {area.title}
                 </h3>
-                <p className="text-gray-600 group-hover:text-gray-100 mb-4 leading-relaxed transition-all duration-700 delay-100">
+                <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-100 mb-3 sm:mb-4 leading-relaxed transition-all duration-700 delay-100 flex-grow">
                   {area.description}
                 </p>
                 
                 {/* Services */}
-                <ul className="professional-list text-sm text-gray-600 group-hover:text-gray-200 mb-4 transition-all duration-700 delay-150">
+                <ul className="professional-list text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 mb-3 sm:mb-4 transition-all duration-700 delay-150 min-h-[100px] sm:min-h-[120px]">
                   {area.services.map((service, serviceIndex) => (
-                    <li key={serviceIndex} className="transform group-hover:translate-x-1 transition-transform duration-500" style={{transitionDelay: `${serviceIndex * 50}ms`}}>{service}</li>
+                    <li key={serviceIndex} className="transform group-hover:translate-x-1 transition-transform duration-500 mb-1" style={{transitionDelay: `${serviceIndex * 50}ms`}}>{service}</li>
                   ))}
                 </ul>
                 
-                <Link href={`/expertise/${area.id}`}>
-                  <button className="text-primary-900 group-hover:text-white font-medium text-sm transition-all duration-700 delay-200 transform group-hover:translate-x-2 group-hover:scale-110">
+                <div className="flex justify-between items-center mt-auto">
+                  <button className="text-primary-900 group-hover:text-white font-medium text-xs sm:text-sm transition-all duration-700 delay-200 transform group-hover:translate-x-2 group-hover:scale-110">
                     Learn More →
                   </button>
-                </Link>
+                </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
