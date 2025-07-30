@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-blue-300">
               <p><strong>www.alplaw.in</strong></p>
               <p>info@alplaw.in</p>
-              <p>+91 22 6789 1000</p>
+              <p>+91 9920175277</p>
             </div>
           </div>
 
@@ -64,12 +64,17 @@ export default function Footer() {
             <div className="space-y-4 mb-6">
               <div>
                 <p className="text-blue-300 text-sm mb-2">Mumbai Office</p>
-                <p className="text-white text-sm">Business Address Line 1</p>
-                <p className="text-white text-sm">Mumbai, Maharashtra</p>
+                <p className="text-white text-sm">407, 4th Floor, Above Axis Bank</p>
+                <p className="text-white text-sm">Laxmi Industrial Estate, Off New Link Road</p>
+                <p className="text-white text-sm">Andheri West, Mumbai, Maharashtra - 400053</p>
               </div>
               <div>
                 <p className="text-blue-300 text-sm mb-2">Email</p>
                 <p className="text-white text-sm">info@alplaw.in</p>
+              </div>
+              <div>
+                <p className="text-blue-300 text-sm mb-2">Phone</p>
+                <p className="text-white text-sm">+91 9920175277</p>
               </div>
             </div>
 
