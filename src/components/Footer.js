@@ -6,9 +6,9 @@ export default function Footer() {
         <div className="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center space-x-3 mb-6 bg-white p-4 rounded-lg shadow-sm">
               <img 
-                src="/Logo.jpg" 
+                src="/Logo.png" 
                 alt="Aequitas Law Partners" 
                 className="h-24 w-auto object-contain"
               />

@@ -50,14 +50,14 @@ export default function Header() {
             className="flex items-center space-x-3"
           >
             <img 
-              src="/Logo.jpg" 
+              src="/Logo.png" 
               alt="Aequitas Law Partners" 
               className="h-24 lg:w-auto object-contain"
             />
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <div className="font-bold text-xl text-gray-900">Aequitas Law Partners</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">Legal Excellence</div>
-            </div>
+            </div> */}
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
