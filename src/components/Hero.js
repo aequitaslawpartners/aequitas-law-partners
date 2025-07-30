@@ -30,15 +30,23 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center bg-blue-900 overflow-hidden">
-      {/* Parallax Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
+      {/* Video Background */}
+      <video 
+        className="absolute inset-0 w-full h-full object-cover"
         style={{
-          backgroundImage: `url('/peak2.gif')`,
           transform: `translateY(${scrollY * 0.5}px)`,
           opacity: 0.8
         }}
-      ></div>
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+      >
+        <source src="/peak2.mp4" type="video/mp4" />
+        <source src="/peak2.gif" type="image/gif" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Dynamic Gradient Overlay */}
       <div 
