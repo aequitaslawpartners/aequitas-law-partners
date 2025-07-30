@@ -127,8 +127,68 @@ export default function PracticeAreaDetailPage() {
           </div>
         </section>
 
+        {/* Why ALP Section - Only show if content exists */}
+        {practiceArea.whyALP && (
+          <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-500 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12"></div>
+            </div>
+            
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6">
+                    <svg className="w-8 h-8 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Choose ALP?</h2>
+                  <div className="w-24 h-1 bg-white mx-auto opacity-60"></div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
+                        {practiceArea.whyALP}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Call to Action */}
+                  <div className="mt-8 pt-8 border-t border-white/20 text-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        Get Expert Counsel
+                      </Link>
+                      <Link href="/people" className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-900 transition-all duration-300 transform hover:scale-105">
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                        </svg>
+                        Meet Our Team
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Contact Section */}
-        <section className="py-16 bg-primary-900">
+        {/* <section className="py-16 bg-primary-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need Expert Legal Counsel in {practiceArea.title}?
@@ -145,7 +205,7 @@ export default function PracticeAreaDetailPage() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
