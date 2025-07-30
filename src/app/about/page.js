@@ -128,11 +128,6 @@ export default function AboutPage() {
             {activeSection !== null && (
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto transform transition-all duration-500 ease-out animate-fadeIn">
                 <div className="flex items-start space-x-6">
-                  <div className={`w-16 h-16 rounded-full bg-${alpSections[activeSection].bgColor} flex items-center justify-center flex-shrink-0`}>
-                    <div className={`text-${alpSections[activeSection].color}`}>
-                      {alpSections[activeSection].icon}
-                    </div>
-                  </div>
                   <div className="flex-1">
                     <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
                       {alpSections[activeSection].letter} – {renderHighlightedText(alpSections[activeSection].title, alpSections[activeSection].highlight)}
