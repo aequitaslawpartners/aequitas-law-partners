@@ -43,7 +43,7 @@ export default function Hero() {
         playsInline
         preload="auto"
       >
-        <source src="/peak2.mp4" type="video/mp4" />
+        <source src="/peak3.mp4" type="video/mp4" />
         <source src="/peak2.gif" type="image/gif" />
         Your browser does not support the video tag.
       </video>
