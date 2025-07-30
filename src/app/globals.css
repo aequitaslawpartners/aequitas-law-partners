@@ -30,6 +30,7 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  text-align: justify;
 }
 
 /* Enhanced smooth scrolling */
