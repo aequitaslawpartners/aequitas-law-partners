@@ -51,12 +51,16 @@ export default function AboutPage() {
   ]
 
   const renderHighlightedText = (text, highlight) => {
-    const parts = text.split(new RegExp(`(${highlight})`, 'gi'))
-    return parts.map((part, index) => 
-      part.toLowerCase() === highlight.toLowerCase() ? 
-        <span key={index} className="bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent font-bold">{part}</span> : 
-        part
-    )
+    // Highlight all three key words: Precision, Innovation, and Equity
+    const keyWords = ['Precision', 'Innovation', 'Equity']
+    let highlightedText = text
+    
+    keyWords.forEach(word => {
+      const regex = new RegExp(`(${word})`, 'gi')
+      highlightedText = highlightedText.replace(regex, `<span class="bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent font-bold">$1</span>`)
+    })
+    
+    return <span dangerouslySetInnerHTML={{ __html: highlightedText }} />
   }
 
   return (
@@ -131,7 +135,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
-                      {alpSections[activeSection].letter} – {alpSections[activeSection].title}
+                      {alpSections[activeSection].letter} – {renderHighlightedText(alpSections[activeSection].title, alpSections[activeSection].highlight)}
                     </h3>
                     <p className="text-lg text-gray-700 leading-relaxed">
                       {renderHighlightedText(alpSections[activeSection].content, alpSections[activeSection].highlight)}
@@ -159,7 +163,7 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <h4 className="text-lg font-semibold text-primary-900 mb-3">
-                      {section.title}
+                      {renderHighlightedText(section.title, section.highlight)}
                     </h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {renderHighlightedText(section.content.substring(0, 100) + '...', section.highlight)}
