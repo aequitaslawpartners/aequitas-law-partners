@@ -96,7 +96,7 @@ export const peopleData = [
       "Capital Markets",
       "Dispute Resolution & Litigation",
       "General Corporate & Commercial Advisory",
-      "Investment Funds, Asset Management and Regulatory Practice",
+      "Investment Funds, Asset Management & Regulatory Practice",
     ],
     education: [
       "B.LS, LLB from Government Law College",
@@ -129,7 +129,7 @@ export const peopleData = [
     image: "/people/Abhishek Pai - Partner.png",
     linkedin: "linkedin.com/in/abhishek-pai-303720118/",
     vcard: "/vcards/abhishek-pai.vcf",
-    bio: "Abhishek Pai is a seasoned corporate counsel and qualified Company Secretary whose practice bridges strategic advisory and courtroom advocacy. He has guided listed companies and international investors on governance, regulatory compliance, and complex cross-border transactions. A former litigator before Mumbai’s trial courts and the appellate courts, Abhishek handled commercial disputes, from fraud and inter-promoter conflicts to succession and investor litigation, bringing those insights to his transactional work. At Aequitas Law Partners, he structures and executes venture capital and private equity deals, scheme-based mergers (NCLT-sanctioned), joint ventures, demergers, asset and share acquisitions. He also advises on hotel management and ISDA agreements, and ensures robust SEBI, RBI and RoC compliance. Abhishek’s sector-agnostic expertise spans mining, pharmaceuticals, fintech, IT, hospitality, real estate, infrastructure, power and manufacturing sectors, gaming, logistics, banking and payments, industrial procurement, human resource management, textile, industrial automation and beyond, making him a trusted advisor in high-stakes transactions.",
+    bio: "Abhishek Pai is a seasoned corporate counsel and qualified Company Secretary whose practice bridges strategic advisory and courtroom advocacy. He has guided listed companies and international investors on governance, regulatory compliance, and complex cross-border transactions. A former litigator before Mumbai’s trial courts and the appellate courts, Abhishek handled commercial disputes, from fraud and inter-promoter conflicts to succession and investor litigation, bringing those insights to his transactional work.<br><br> At Aequitas Law Partners, he structures and executes venture capital and private equity deals, scheme-based mergers (NCLT-sanctioned), joint ventures, demergers, asset and share acquisitions. He also advises on hotel management and ISDA agreements, and ensures robust SEBI, RBI and RoC compliance. <br><br> Abhishek’s sector-agnostic expertise spans mining, pharmaceuticals, fintech, IT, hospitality, real estate, infrastructure, power and manufacturing sectors, gaming, logistics, banking and payments, industrial procurement, human resource management, textile, industrial automation and beyond, making him a trusted advisor in high-stakes transactions.",
     expertise: [
       "Banking & Finance",
       "Capital Markets",
@@ -175,7 +175,7 @@ export const peopleData = [
     linkedin: "linkedin.com/in/urvi-gala-172782a8",
     vcard: "/vcards/urvi-gala.vcf",
     image: "/people/Urvi Gala - Principal Associate.png",
-    bio: "Urvi comes with an elaborate expertise and experience in General Corporate, Private Equity, Venture Capital, Mergers & Acquisitions and Joint Ventures. She regularly advises Indian and international clients, including companies, investment funds, banks and financial institutions. Urvi supports clients throughout the entire transaction process from conducting due diligence and advising on deal structure, to ensuring regulatory compliance and drafting key legal documents. Urvi has worked with clients across a wide range of industries, including e-commerce, real estate, education, ed-tech, fintech, hospitality, pharmaceuticals, banking and finance, IT-enabled services, drones, FMCG and manufacturing. Urvi also advises on company formation, structuring of corporate entities, FEMA compliance and preparing various commercial contracts such as technology licensing agreements, IP assignment agreements and service agreements.",
+    bio: "Urvi comes with an elaborate expertise and experience in General Corporate, Private Equity, Venture Capital, Mergers & Acquisitions and Joint Ventures. She regularly advises Indian and international clients, including companies, investment funds, banks and financial institutions. <br><br> Urvi supports clients throughout the entire transaction process from conducting due diligence and advising on deal structure, to ensuring regulatory compliance and drafting key legal documents. Urvi has worked with clients across a wide range of industries, including e-commerce, real estate, education, ed-tech, fintech, hospitality, pharmaceuticals, banking and finance, IT-enabled services, drones, FMCG and manufacturing.<br><br> Urvi also advises on company formation, structuring of corporate entities, FEMA compliance and preparing various commercial contracts such as technology licensing agreements, IP assignment agreements and service agreements.",
     expertise: [
       "Banking & Finance",
       "Competition & Antitrust Law",

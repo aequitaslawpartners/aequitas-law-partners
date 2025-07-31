@@ -79,7 +79,7 @@ export default function Hero() {
                 opacity: Math.max(0.3, 1 - scrollY * 0.001)
               }}>
             {/* <span className="block text-left">Aequitas Law Partners</span> */}
-            <span className="block text-left">AEQUITAS <span className="ml-2">LAW </span> <span className="ml-2">PARTNERS</span></span>
+            <span className="block text-center">AEQUITAS <span className="ml-2">LAW </span> <span className="ml-2">PARTNERS</span></span>
           </h1>
         </div>
       </div>

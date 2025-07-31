@@ -1,14 +1,22 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import { peopleData } from '@/data/people'
+import { practiceAreasData } from '@/data/practiceAreas'
 
 export default function PersonPage({ params }) {
   const person = peopleData.find(p => p.id === params.id)
   
   if (!person) {
     notFound()
+  }
+
+  // Function to convert expertise name to URL slug
+  const getExpertiseSlug = (expertiseName) => {
+    const practiceArea = practiceAreasData.find(area => area.title === expertiseName)
+    return practiceArea ? practiceArea.id : null
   }
 
   return (
@@ -20,14 +28,16 @@ export default function PersonPage({ params }) {
         <section className="relative bg-gradient-to-br from-primary-900 to-secondary-500 py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-12 items-center">
-              <div className="lg:col-span-2">
+            <div className="grid lg:grid-cols-3 gap-x-12 gap-y-4">
+              <div className="lg:col-span-3">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
                   {person.name}
                 </h1>
                 <p className="text-2xl text-secondary-200 mb-6 font-medium">
                   {person.designation}
                 </p>
+              </div>
+              <div className="lg:col-span-2">
                 <div 
                   className="text-lg text-gray-200 leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: person.bio }}
@@ -124,14 +134,26 @@ export default function PersonPage({ params }) {
               <div>
                 <h2 className="text-3xl font-bold text-primary-900 mb-6">Areas of Expertise</h2>
                 <div className="space-y-3">
-                  {person.expertise.map((area, index) => (
-                    <div key={index} className="flex items-center">
-                      <svg className="w-5 h-5 text-secondary-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-700 font-medium">{area}</span>
-                    </div>
-                  ))}
+                  {person.expertise.map((area, index) => {
+                    const expertiseSlug = getExpertiseSlug(area)
+                    return (
+                      <div key={index} className="flex items-center">
+                        <svg className="w-5 h-5 text-secondary-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {expertiseSlug ? (
+                          <Link 
+                            href={`/expertise/${expertiseSlug}`}
+                            className="text-gray-700 font-medium hover:text-secondary-600 hover:underline transition-colors cursor-pointer"
+                          >
+                            {area}
+                          </Link>
+                        ) : (
+                          <span className="text-gray-700 font-medium">{area}</span>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
               <div>
