@@ -3,7 +3,8 @@ export default function Banner() {
     <div className="banner">
       <div className="container-max">
         <p className="m-0 text-center">
-          <strong>Precision</strong> • Innovation  • <span>Equity</span>
+          {/* <strong>PRECISION</strong> • INNOVATION  • <span>EQUITY</span> */}
+          <strong>PRECISION</strong> ♦ INNOVATION  ♦ <span>EQUITY</span>
         </p>
       </div>
     </div>

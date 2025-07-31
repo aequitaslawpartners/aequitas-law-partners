@@ -73,13 +73,13 @@ export default function AboutPage() {
         </section>
 
         {/* Vision Statement Section */}
-        <section className="py-20 bg-white">
+        <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">Who We Are</h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed ">
-                  We are a firm built for impact, designed to achieve unparalleled outcomes through sharp insight, precision and seamless execution. At ALP, we combine legal excellence with innovation and strategic foresight, delivering solutions that not only solve problems but shape the course of our clients’ futures. We don’t just advise, we partner, guide and empower with clarity, agility and purpose.
+                  Aequitas Law Partners (ALP), a firm inspired by the strength and timeless resilience of the Alps, is built for impact. We are designed to achieve unparalleled outcomes through sharp insight, precision and seamless execution. At ALP, we combine legal excellence with innovation and strategic foresight, delivering solutions that not only resolve complex challenges but shape the course of our clients’ futures. <br /><br /><span className="italic">We don’t just advise, we partner, guide and empower with clarity, agility and purpose.</span>
                 </p>
               </div>
             </div>

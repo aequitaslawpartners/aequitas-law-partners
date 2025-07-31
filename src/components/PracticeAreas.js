@@ -115,7 +115,7 @@ export default function PracticeAreas() {
             >
               <div 
                 ref={setRef(index)}
-                className={`bg-white rounded-lg shadow-lg overflow-hidden rich-card magnetic-element scroll-card gpu-accelerated relative cursor-pointer transition-all duration-700 hover:shadow-2xl sm:hover:scale-105 h-full flex flex-col ${isVisible(index) ? 'visible' : ''}`}
+                className={`bg-white rounded-lg shadow-lg overflow-hidden rich-card magnetic-element scroll-card gpu-accelerated relative cursor-pointer transition-all duration-700 hover:shadow-2xl sm:hover:scale-105 h-48 flex flex-col ${isVisible(index) ? 'visible' : ''}`}
                 data-scale="1.02"
                 data-parallax="0.02"
               >
@@ -134,8 +134,8 @@ export default function PracticeAreas() {
               </div> */}
               
               {/* Content */}
-              <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col h-32">
-                <div className="flex items-start mb-3 h-16">
+              <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col justify-between h-full">
+                <div className="flex items-start mb-3">
                   <div className="text-primary-900 group-hover:text-white transition-all duration-700 mr-3 flex-shrink-0 mt-1">
                     {getIcon(area.icon, "w-6 h-6 sm:w-8 sm:h-8")}
                   </div>

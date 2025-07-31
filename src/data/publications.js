@@ -4,7 +4,7 @@ export const publicationsData = [
     title: "India's Evolving Legal Landscape: Corporate Compliance in 2025",
     excerpt: "A comprehensive analysis of the changing regulatory environment and its impact on corporate governance, featuring insights from our senior partners and key developments in Indian corporate law.",
     content: `
-      <p>India's legal landscape continues to evolve rapidly, with significant changes in corporate compliance requirements that are reshaping how businesses operate. As we progress through 2025, organizations must navigate an increasingly complex regulatory environment while maintaining operational efficiency and growth objectives.</p>
+      <p>India's legal landscape continues to evolve rapidly, with significant changes in corporate compliance requirements that are reshaping how businesses operate. As we progress through 2025 organizations must navigate an increasingly complex regulatory environment while maintaining operational efficiency and growth objectives.</p>
       
       <h2>Key Regulatory Changes</h2>
       <p>The year 2025 has brought several pivotal changes in corporate compliance:</p>

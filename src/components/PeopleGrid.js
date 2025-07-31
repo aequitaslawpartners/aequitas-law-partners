@@ -12,9 +12,9 @@ export default function PeopleGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <h2 className={`text-3xl lg:text-4xl font-bold text-primary-900 mt-2 mb-6 scroll-reveal ${headerVisible ? 'visible' : ''}`}
+          <h2 className={`text-3xl lg:text-4xl font-bold text-primary-900 mb-6 scroll-reveal ${headerVisible ? 'visible' : ''}`}
               style={{ transitionDelay: headerVisible ? '0.05s' : '0s' }}>
-            Home to Inspired Performances
+            Home of Inspired Performers
           </h2>
         </div>
 
