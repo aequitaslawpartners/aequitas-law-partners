@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import DisclaimerModal from "@/components/DisclaimerModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
         <meta name="target" content="Corporate Clients, Startups, Entrepreneurs" />
       </head>
       <body className={`${inter.variable} antialiased smooth-scroll gpu-accelerated`}>
+        <DisclaimerModal />
         {children}
       </body>
     </html>
