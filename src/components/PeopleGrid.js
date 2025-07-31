@@ -12,18 +12,10 @@ export default function PeopleGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
-          <span className={`text-sm font-medium text-primary-900 uppercase tracking-wide scroll-text ${headerVisible ? 'visible' : ''}`}>
-            People
-          </span>
-          <h2 className={`text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-6 scroll-reveal ${headerVisible ? 'visible' : ''}`}
+          <h2 className={`text-3xl lg:text-4xl font-bold text-primary-900 mt-2 mb-6 scroll-reveal ${headerVisible ? 'visible' : ''}`}
               style={{ transitionDelay: headerVisible ? '0.05s' : '0s' }}>
             Home to Inspired Performances
           </h2>
-          <p className={`text-xl text-gray-600 max-w-3xl mx-auto scroll-text ${headerVisible ? 'visible' : ''}`}
-             style={{ transitionDelay: headerVisible ? '0.1s' : '0s' }}>
-            Our distinguished team of legal professionals brings decades of experience 
-            and deep expertise across multiple practice areas.
-          </p>
         </div>
 
         {/* Team Grid */}
