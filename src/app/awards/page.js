@@ -120,7 +120,7 @@ export default function AwardsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Commitment to Excellence</h2>
               <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
                 These recognitions reflect our unwavering commitment to delivering exceptional legal services, 
-                maintaining the highest professional standards, and continuously innovating to meet our clients' evolving needs. 
+                maintaining the highest professional standards and continuously innovating to meet our clients' evolving needs. 
                 We are honored to be recognized by our peers and clients for our dedication to excellence in the legal profession.
               </p>
             </div>

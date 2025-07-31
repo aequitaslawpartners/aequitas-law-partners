@@ -60,7 +60,7 @@ export default function PracticeAreaDetailPage() {
         {/* Overview Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-primary-900 mb-6">Overview</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -79,13 +79,6 @@ export default function PracticeAreaDetailPage() {
                     ))}
                   </ul>
                 </div>
-              </div>
-              <div>
-                <img 
-                  src={practiceArea.image} 
-                  alt={practiceArea.title}
-                  className="w-full h-96 object-cover rounded-xl shadow-lg"
-                />
               </div>
             </div>
           </div>

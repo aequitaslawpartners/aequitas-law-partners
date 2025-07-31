@@ -4,7 +4,7 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 
 ## 🏔️ About Aequitas Law Partners
 
-**Aequitas** (Latin for equity, justice, fairness, and symmetry) represents our core philosophy. The mountain/alpine theme throughout the design symbolizes grandness, boldness, and our vision to reach new heights in legal excellence.
+**Aequitas** (Latin for equity, justice, fairness and symmetry) represents our core philosophy. The mountain/alpine theme throughout the design symbolizes grandness, boldness and our vision to reach new heights in legal excellence.
 
 - **Domain**: [www.alplaw.in](https://www.alplaw.in)
 - **Founded**: 2025
@@ -33,7 +33,7 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 2. **About**: Firm values and meaning of "Aequitas"
 3. **Practice Areas**: 9 core legal service areas with detailed descriptions
 4. **Team**: Professional profiles of key lawyers and partners
-5. **Insights**: Legal articles, resources, and thought leadership
+5. **Insights**: Legal articles, resources and thought leadership
 6. **Contact**: Multi-office contact information with consultation form
 
 ## 🛠️ Getting Started

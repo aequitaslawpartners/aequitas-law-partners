@@ -37,7 +37,7 @@ export default function CareersPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Senior Associate - Corporate Law</h3>
                     <p className="text-gray-600 mb-4">
                       We are seeking an experienced corporate lawyer to join our team. The ideal candidate will have 3-5 years of experience 
-                      in corporate law, M&A transactions, and regulatory compliance.
+                      in corporate law, M&A transactions and regulatory compliance.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">Corporate Law</span>
@@ -61,7 +61,7 @@ export default function CareersPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Junior Associate - Startup & Technology Law</h3>
                     <p className="text-gray-600 mb-4">
                       Join our dynamic startup practice group. Looking for a motivated lawyer with 1-3 years of experience 
-                      in startup legal matters, venture capital, and technology law.
+                      in startup legal matters, venture capital and technology law.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-secondary-100 text-secondary-700 text-sm rounded-full">Startup Law</span>

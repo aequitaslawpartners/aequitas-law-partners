@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "All Insights | Aequitas Law Partners",
-  description: "Comprehensive collection of legal insights, articles, and thought leadership from Aequitas Law Partners covering corporate law, startup services, and regulatory updates.",
+  description: "Comprehensive collection of legal insights, articles and thought leadership from Aequitas Law Partners covering corporate law, startup services and regulatory updates.",
 };
 
 export default function InsightsLayout({ children }) {

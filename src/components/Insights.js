@@ -29,7 +29,7 @@ export default function Insights() {
       title: "ESG Compliance for Indian Corporations",
       category: "Corporate Governance",
       date: "July 10, 2025",
-      excerpt: "Understanding Environmental, Social, and Governance requirements and their impact on corporate strategies.",
+      excerpt: "Understanding Environmental, Social and Governance requirements and their impact on corporate strategies.",
       readTime: "6 min read",
       featured: false
     },
@@ -69,7 +69,7 @@ export default function Insights() {
           </h2>
           <p className={`text-xl text-gray-600 max-w-3xl mx-auto scroll-text ${headerVisible ? 'visible' : ''}`}
              style={{ transitionDelay: headerVisible ? '0.1s' : '0s' }}>
-            Stay informed with our latest legal insights, industry analysis, and thought leadership on key developments
+            Stay informed with our latest legal insights, industry analysis and thought leadership on key developments
           </p>
         </div>
 

@@ -34,7 +34,7 @@ export default function About() {
                    opacity: Math.min(1, scrollY * 0.003)
                  }}>
                 <strong>Aequitas Law Partners</strong> represents a legacy of legal excellence, embodying equity, 
-                justice, fairness, and symmetry in every engagement. Since our inception, we have been 
+                justice, fairness and symmetry in every engagement. Since our inception, we have been 
                 instrumental in shaping India's commercial legal landscape.
               </p>
               

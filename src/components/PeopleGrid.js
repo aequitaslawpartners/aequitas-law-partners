@@ -28,43 +28,49 @@ export default function PeopleGrid() {
             >
               <div 
                 ref={setRef(index)}
-                className={`bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:scale-105 scroll-card ${isVisible(index) ? 'visible' : ''}`}
+                className={`bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-700 overflow-hidden group-hover:scale-105 scroll-card relative ${isVisible(index) ? 'visible' : ''}`}
               >
-                <div className="aspect-w-3 aspect-h-4">
+                {/* Animated gradient overlay that expands from top-right */}
+                <div className="absolute inset-0 bg-gradient-to-bl from-primary-900 via-blue-700 to-blue-500 opacity-0 group-hover:opacity-95 transition-all duration-700 ease-out transform scale-0 group-hover:scale-110 origin-top-right rounded-lg z-10"></div>
+                
+                {/* Additional shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 z-20"></div>
+                
+                <div className="aspect-w-3 aspect-h-4 relative z-30">
                   <img
                     src={person.image}
                     alt={person.name}
                     className="w-full h-80 object-contain"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary-900 mb-2 group-hover:text-secondary-500 transition-colors">
+                <div className="p-6 relative z-30">
+                  <h3 className="text-xl font-bold text-primary-900 mb-2 group-hover:text-white transition-all duration-700">
                     {person.name}
                   </h3>
-                  <p className="text-secondary-500 font-medium mb-3">
+                  <p className="text-secondary-500 font-medium mb-3 group-hover:text-white transition-all duration-700">
                     {person.designation}
                   </p>
-                  <div className="space-y-2 text-sm text-gray-600 mb-4">
+                  <div className="space-y-2 text-sm text-gray-600 mb-4 group-hover:text-white transition-all duration-700">
                     <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-2 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-2 text-secondary-500 group-hover:text-white transition-all duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       {person.mobile}
                     </div>
                     <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-2 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-2 text-secondary-500 group-hover:text-white transition-all duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
                       {person.email}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+                  <p className="text-sm text-gray-600 line-clamp-3 mb-4 group-hover:text-white transition-all duration-700">
                     {person.bio}
                   </p>
                   <div className="mt-4">
-                    <span className="inline-flex items-center text-secondary-500 text-sm font-medium group-hover:text-primary-900 transition-colors">
+                    <span className="inline-flex items-center text-secondary-500 text-sm font-medium group-hover:text-white transition-all duration-700 transform group-hover:translate-x-2">
                       View Profile
-                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </span>

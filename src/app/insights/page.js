@@ -24,7 +24,7 @@ export default function AllInsights() {
       title: "ESG Compliance for Indian Corporations",
       category: "Corporate Governance",
       date: "July 10, 2025",
-      excerpt: "Understanding Environmental, Social, and Governance requirements and their impact on corporate strategies.",
+      excerpt: "Understanding Environmental, Social and Governance requirements and their impact on corporate strategies.",
       readTime: "6 min read",
       featured: false,
       author: "Legal Team",
@@ -74,7 +74,7 @@ export default function AllInsights() {
       title: "Capital Markets and Public Offerings Guide",
       category: "Capital Markets",
       date: "June 15, 2025",
-      excerpt: "Complete guide to IPO processes, regulatory requirements, and capital market regulations in India.",
+      excerpt: "Complete guide to IPO processes, regulatory requirements and capital market regulations in India.",
       readTime: "8 min read",
       featured: false,
       author: "Legal Team",
@@ -133,7 +133,7 @@ export default function AllInsights() {
             Legal Insights & Resources
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive collection of legal analysis, industry insights, and thought leadership from our expert team
+            Comprehensive collection of legal analysis, industry insights and thought leadership from our expert team
           </p>
         </div>
 
@@ -229,7 +229,7 @@ export default function AllInsights() {
             Stay Updated with Legal Insights
           </h2>
           <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest legal updates, insights, and analysis delivered directly to your inbox.
+            Subscribe to our newsletter for the latest legal updates, insights and analysis delivered directly to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
             <input 

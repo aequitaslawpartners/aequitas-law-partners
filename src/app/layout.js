@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Aequitas Law Partners | Corporate & Startup Legal Services | Mumbai, Delhi, Bangalore",
-  description: "Aequitas Law Partners (ALP) - Elevating justice in business through expert corporate law, startup legal services, M&A, banking & finance, and intellectual property counsel. Serving clients across Mumbai, Delhi, and Bangalore.",
+  description: "Aequitas Law Partners (ALP) - Elevating justice in business through expert corporate law, startup legal services, M&A, banking & finance and intellectual property counsel. Serving clients across Mumbai, Delhi and Bangalore.",
   keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers, Delhi law firm, Bangalore legal services",
   authors: [{ name: "Aequitas Law Partners" }],
   viewport: "width=device-width, initial-scale=1",

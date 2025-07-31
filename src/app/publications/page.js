@@ -17,7 +17,7 @@ export default function PublicationsPage() {
               Publications
             </h1>
             <p className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Expert insights, thought leadership, and comprehensive analysis on legal developments
+              Expert insights, thought leadership and comprehensive analysis on legal developments
             </p>
           </div>
         </section>
