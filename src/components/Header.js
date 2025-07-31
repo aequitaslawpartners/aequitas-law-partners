@@ -63,43 +63,43 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-16">
             <Link 
               href="/about" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               About ALP
             </Link>
             <Link 
               href="/expertise" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               Expertise
             </Link>
             <Link 
               href="/people" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               People
             </Link>
             {/* <Link 
               href="/publications" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               Publications
             </Link>
             <Link 
               href="/awards" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               Awards and Recognitions
             </Link> */}
             <Link 
               href="/careers" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               Careers
             </Link>
             <Link 
               href="/contact" 
-              className="professional-link nav-link-animation text-xl font-medium"
+              className="professional-link nav-link-animation text-xl font-medium hover:text-blue-500"
             >
               Contact Us
             </Link>

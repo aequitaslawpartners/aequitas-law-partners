@@ -49,13 +49,13 @@ export default function Hero() {
       </video>
 
       {/* Dynamic Gradient Overlay */}
-      <div 
+      {/* <div 
         className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-800"
         style={{ 
           opacity: 0.4 + (scrollY * 0.001),
           transform: `scale(${1 + scrollY * 0.0001})`
         }}
-      ></div>
+      ></div> */}
 
       {/* Floating Background Elements with Scroll Response */}
       <div className="absolute bottom-32 left-16 w-24 h-24 bg-white opacity-3 rounded-full"
@@ -73,38 +73,13 @@ export default function Hero() {
       {/* Content - Always Visible */}
       <div ref={heroRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8"
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-96"
               style={{ 
                 transform: `translateY(${scrollY * 0.1}px)`,
                 opacity: Math.max(0.3, 1 - scrollY * 0.001)
               }}>
-            <span className="block">Aequitas Law Partners</span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl font-light mt-2 text-gray-200">
-              Elevating Justice in Business
-            </span>
+            <span className="block text-left">Aequitas Law Partners</span>
           </h1>
-          
-          <p className="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed"
-             style={{ 
-               transform: `translateY(${scrollY * 0.05}px)`,
-               opacity: Math.max(0.2, 1 - scrollY * 0.002)
-             }}>
-            Facilitating commercial legal solutions with precision, integrity, and excellence.
-            Leveraging insight to script legal discourse across corporate India.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-12"
-               style={{ 
-                 transform: `translateY(${scrollY * 0.02}px)`,
-                 opacity: Math.max(0.1, 1 - scrollY * 0.003)
-               }}>
-            <a href="#practice-areas" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-900 bg-white hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              Explore Expertise
-            </a>
-            <a href="#insights" className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-900 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              Thought Leadership
-            </a>
-          </div>
         </div>
       </div>
 
