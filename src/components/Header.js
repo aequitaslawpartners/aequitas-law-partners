@@ -43,7 +43,7 @@ export default function Header() {
       
       <header className="nav-professional sticky top-0 z-30">
       <div className="container-max">
-        <div className="flex items-center justify-between lg:justify-between py-4">
+        <div className="flex items-center justify-between lg:justify-between py-2">
           {/* Logo - image visible on all devices, text hidden on mobile */}
           <Link 
             href="/" 
@@ -52,7 +52,7 @@ export default function Header() {
             <img 
               src="/Logo.png" 
               alt="Aequitas Law Partners" 
-              className="h-24 lg:w-auto object-contain"
+              className="h-24 py-2 lg:w-auto object-contain"
             />
             {/* <div className="hidden md:block">
               <div className="font-bold text-xl text-gray-900">Aequitas Law Partners</div>

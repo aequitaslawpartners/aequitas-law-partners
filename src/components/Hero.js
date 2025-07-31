@@ -144,13 +144,6 @@ export default function Hero() {
              transform: `translateX(-50%) translateY(${Math.sin(scrollY * 0.01) * 10}px)`,
              opacity: Math.max(0.3, 1 - scrollY * 0.002)
            }}>
-        <div className="animate-bounce">
-          <svg className="w-6 h-6 text-white transition-transform duration-300" 
-               style={{ transform: `rotate(${scrollY * 0.1}deg)` }}
-               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-        </div>
       </div>
 
       {/* Scroll Progress Bar */}

@@ -6,11 +6,11 @@ export default function Footer() {
         <div className="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6 bg-white p-4 rounded-lg shadow-sm">
+            <div className="flex items-center space-x-3 p-4 rounded-lg shadow-sm">
               <img 
-                src="/Logo.png" 
+                src="/Logo-White.png" 
                 alt="Aequitas Law Partners" 
-                className="h-24 w-auto object-contain"
+                className="h-32 w-auto object-contain"
               />
               {/* <div>
                 <h3 className="text-xl font-bold">Aequitas Law Partners</h3>
@@ -118,10 +118,6 @@ export default function Footer() {
 
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center lg:justify-end space-x-6 text-sm text-blue-300">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Disclaimer</a>
               <a href="#" className="hover:text-white transition-colors">Sitemap</a>
             </div>
           </div>
