@@ -1,7 +1,7 @@
 export const practiceAreasData = [
   {
     id: "general-corporate-commercial",
-    title: "General Corporate and Commercial Advisory",
+    title: "General Corporate & Commercial Advisory",
     description: "As businesses evolve in an increasingly complex regulatory and commercial environment, timely and strategic legal advice is essential to effective decision-making, risk mitigation, and long-term value creation. From business structuring and commercial contracting to ongoing compliance and governance support, organisations require holistic legal counsel that is both practical and attuned to the realities of dynamic markets.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Entity Structuring and Business Incorporation", "Corporate Governance and Secretarial Support", "Commercial Contracts and Business Arrangements", "Internal Policies and Compliance Frameworks", "Stakeholder and Board Approvals", "Regulatory and Licensing Support", "Strategic Corporate Advisory"],
@@ -50,7 +50,7 @@ export const practiceAreasData = [
   },
   {
     id: "private-equity-venture-capital",
-    title: "Private Equity and Venture Capital",
+    title: "Private Equity & Venture Capital",
     description: "India continues to be a key destination for private equity (PE) and venture capital (VC) investments, driven by ongoing economic liberalization, a vibrant start-up ecosystem, and strong investor confidence.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Strategic Investment Structuring", "Term Sheet Advisory", "Legal Due Diligence", "Regulatory & Compliance Support", "Transaction Documentation", "Closing & Post-Closing Support"],
@@ -92,7 +92,7 @@ export const practiceAreasData = [
   },
   {
     id: "banking-finance",
-    title: "Banking and Finance",
+    title: "Banking & Finance",
     description: "India's banking and financial services sector continues to evolve rapidly, shaped by innovation, regulatory transformation, and increased access to global capital. With changing monetary policy, the emergence of fintech, and an evolving regulatory landscape, both lenders and borrowers require sophisticated, timely and commercially relevant legal solutions.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Bilateral and Syndicated Lending", "External Commercial Borrowings (ECBs)", "Project and Infrastructure Finance", "Acquisition Finance and Leveraged Buyouts", "Securitisation and Asset-backed Lending", "Fintech and Digital Lending", "Debt Restructuring and Refinancing", "Security Creation and Enforcement", "Regulatory and Compliance Advisory"],
@@ -149,7 +149,7 @@ export const practiceAreasData = [
   },
   {
     id: "competition-antitrust",
-    title: "Competition and Anti-Trust Law",
+    title: "Competition & Antitrust Law",
     description: "India's competition law landscape is witnessing heightened regulatory activity, greater scrutiny of digital markets, and increased complexity in merger review and antitrust enforcement. As the Competition Commission of India (CCI) intensifies its oversight across sectors, businesses need proactive and strategic legal guidance to navigate investigations, regulatory clearances, and compliance obligations effectively.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Merger Control and Combination Filings", "Anti-Cartel Enforcement and Defence", "Abuse of Dominance Advisory", "Antitrust Compliance and Risk Management", "Representation before Authorities and Appellate Tribunals"],
@@ -189,8 +189,8 @@ export const practiceAreasData = [
     whyALP: "Our Competition and Antitrust team offers forward-thinking, agile, and business-aligned legal advice rooted in a deep understanding of India's competition law regime. We bring cross-disciplinary insight, sectoral expertise, and a commitment to helping clients maintain compliance, avoid enforcement, and secure regulatory approvals efficiently. We understand that competition risk is not static. Our advice goes beyond legal analysis to consider market structure, economic impact, and reputational exposure. We aim to equip clients with defensible strategies, compliant operations, and regulator-ready documentation. Whether managing combination filings for complex acquisitions, addressing dominance risks in growing markets, or defending clients in cartel or abuse investigations, Aequitas Law Partners is a reliable partner in all aspects of competition and antitrust law."
   },
   {
-    id: "mergers-acquisitions-joint-ventures",
-    title: "Mergers and Acquisitions and Joint Ventures",
+    id: "mergers-acquisitions",
+    title: "Mergers & Acquisitions",
     description: "India's dynamic business environment, growing global integration, and sectoral consolidation continue to drive a steady increase in merger and acquisition (M&A) activity. From strategic acquisitions and business consolidations to cross-border investments, joint ventures and restructurings, M&A transactions are central to enterprise growth and transformation.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Strategic Deal Structuring", "Legal Due Diligence", "Regulatory & Compliance Support", "Transaction Documentation", "Stakeholder and Board Approvals", "Representation before the NCLT", "Closing & Post-Closing Support"],
@@ -238,8 +238,8 @@ export const practiceAreasData = [
     whyALP: "Our M&A team offers strategic, responsive, and time-bound execution-focused legal advice grounded in a deep understanding of both Indian and international transaction dynamics. Our ability to collaborate across disciplines and industries, coupled with a commitment to practical solutions, allows us to deliver value-driven counsel that aligns with our clients' long-term business vision. We put our clients' goals first. Throughout a transaction, we communicate clearly and work closely with management and stakeholders to understand priorities and deadlines. Our focus on responsiveness, practical advice and cost-effective solutions ensures that the deal process is aligned with our clients' needs. Whether navigating high-stakes acquisitions, crafting joint ventures, or leading complex cross-border transactions, Aequitas Law Partners is a trusted advisor for transformative corporate activity."
   },
   {
-    id: "investment-funds-regulatory",
-    title: "Investment Funds & Regulatory Practice",
+    id: "funds-asset-management-regulatory-practice",
+    title: "Investment Funds, Asset Management & Regulatory Practice",
     description: "India's investment fund ecosystem is evolving rapidly and our team is deeply embedded in this transformation. We provide end-to-end legal, regulatory and structuring advice to fund sponsors, managers and investors across the entire fund lifecycle from formation to exit.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Fund Structuring & Formation", "Regulatory Approvals & Compliance", "Fund Documentation", "Governance & Risk Management", "Investor & Manager Representation"],
@@ -277,38 +277,6 @@ export const practiceAreasData = [
       "SEBI, IFSCA, and multi-jurisdictional regulatory interface"
     ],
     whyALP: "Our Investment Funds & Regulatory Practice combines extensive domain expertise with cross-border experience to deliver practical, customized advice grounded in strong commercial and in-house perspectives. We maintain established relationships with regulators and are actively involved in policy formulation, ensuring our clients benefit from current market insights and regulatory developments. Our proven ability to deliver effective solutions within challenging timelines, combined with our technically sound and market-aligned approach, makes us a trusted partner for fund sponsors, managers, and investors navigating India's rapidly evolving investment fund ecosystem."
-  },
-  {
-    id: "gift-city-ifsc",
-    title: "GIFT City – IFSC",
-    description: "Specialized services for International Financial Services Centre operations and regulatory compliance in GIFT City.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    services: ["IFSC Regulations", "Cross-border Transactions", "Financial Services Setup", "Regulatory Approvals"],
-    overview: "Our GIFT City practice provides specialized legal services for businesses establishing operations in India's premier International Financial Services Centre, ensuring compliance with IFSC regulations and optimal structuring.",
-    keyServices: [
-      {
-        title: "IFSC Regulations",
-        description: "Comprehensive guidance on IFSC regulatory framework, licensing, and ongoing compliance requirements."
-      },
-      {
-        title: "Cross-border Transactions",
-        description: "Structuring cross-border financial transactions and investment flows through GIFT IFSC."
-      },
-      {
-        title: "Financial Services Setup",
-        description: "Establishing banking, insurance, capital markets, and asset management operations in GIFT City."
-      },
-      {
-        title: "Regulatory Approvals",
-        description: "Obtaining necessary approvals from IFSCA and other regulatory authorities for IFSC operations."
-      }
-    ],
-    expertise: [
-      "IFSCA regulatory compliance",
-      "International banking operations",
-      "Cross-border fund management",
-      "Fintech and innovation sandbox"
-    ]
   },
   {
     id: "capital-markets",
@@ -365,7 +333,7 @@ export const practiceAreasData = [
   },
   {
     id: "hr-labour-employment",
-    title: "Human Resources, Labour and Employment",
+    title: "Human Resources, Labour & Employment",
     description: "India's labour and employment framework is undergoing significant transformation with increasing formalisation, digitisation of compliance, evolving jurisprudence, and the anticipated implementation of the new labour codes. Against this backdrop, businesses must navigate a web of central, state and municipal-level regulations while managing workforce relations in a compliant and commercially sound manner.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Employment Contracts and HR Documentation", "Statutory Compliance and Advisory", "Workforce Restructuring and Terminations", "Employment Disputes and Litigation", "Executive Employment and Senior Hires", "Employment Issues in M&A and Business Transfers", "Workplace Investigations and POSH Compliance", "Global Mobility and Secondment"],
@@ -419,7 +387,7 @@ export const practiceAreasData = [
   },
   {
     id: "dispute-resolution-litigation",
-    title: "Dispute Resolution and Litigation",
+    title: "Dispute Resolution & Litigation",
     description: "India's fast-evolving business landscape and complex regulatory environment often give rise to high-stakes commercial disputes. Businesses today require strategic, time-bound, and commercially sensible dispute resolution support, both inside and outside the courtroom. Whether navigating contractual breaches, shareholder disputes, regulatory investigations, or recovery actions, effective dispute management can be a critical determinant of business continuity and reputation.",
     image: "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Commercial Litigation", "Arbitration (Domestic and International)", "Shareholder and Governance Disputes", "Regulatory Litigation and Investigations", "White-Collar and Economic Offences", "Writ Petitions and Constitutional Remedies", "Recovery and Insolvency Litigation", "Pre-litigation Strategy and Settlement"],
@@ -521,7 +489,7 @@ export const practiceAreasData = [
   },
   {
     id: "data-privacy-protection",
-    title: "Data Privacy and Protection",
+    title: "Data Privacy & Protection",
     description: "In today's digital-first economy, the management and protection of personal data have become business-critical. The global evolution of data protection regulations, increasing regulatory scrutiny, and rising consumer expectations have made privacy governance a key strategic and compliance imperative for organisations across sectors.",
     image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Regulatory Compliance Advisory", "Privacy Policy and Notice Drafting", "Data Processing and Cross-Border Transfer Strategy", "Data Protection Impact Assessments (DPIAs)", "Vendor and Employee Data Governance", "Incident Management and Breach Response", "Representation before Authorities"],
@@ -620,7 +588,7 @@ export const practiceAreasData = [
   },
   {
     id: "insolvency-bankruptcy",
-    title: "Insolvency and Bankruptcy",
+    title: "Insolvency & Bankruptcy",
     description: "India's maturing insolvency framework has become a central pillar for financial discipline, creditor protection, and corporate debt resolution. The Insolvency and Bankruptcy Code, 2016 (IBC), has transformed the landscape for distressed asset recovery, restructuring, and liquidation by introducing time-bound and creditor-driven processes. For stakeholders, whether financial creditors, operational creditors, debtors, or resolution applicants, navigating the IBC requires deep legal understanding, strategic clarity, and swift execution.",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     services: ["Corporate Insolvency Resolution Process (CIRP)", "Resolution Plan Advisory and Implementation", "Liquidation Proceedings", "Cross-Border Insolvency and Group Insolvency", "Litigation and Representation before Tribunals and Courts", "Transaction Audit and Avoidance Proceedings"],

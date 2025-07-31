@@ -153,18 +153,6 @@ export default function Hero() {
           style={{ width: `${scrollProgress}%` }}
         ></div>
       </div>
-
-      {/* Moving Elements that clearly show scroll */}
-      <div className="fixed bottom-4 right-4 z-40">
-        <div 
-          className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
-          style={{ 
-            transform: `rotate(${scrollY * 0.5}deg) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
-          }}
-        >
-          <div className="w-3 h-3 bg-white rounded-full"></div>
-        </div>
-      </div>
     </section>
   )
 }

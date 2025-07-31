@@ -18,7 +18,6 @@ export default function PracticeAreas() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Floating background elements */}
         <div className="absolute left-10 top-20 w-20 h-20 bg-primary-900 opacity-5 rounded-full floating-element"></div>
-        <div className="absolute right-16 bottom-32 w-16 h-16 bg-primary-900 opacity-3 rounded-full floating-element-slow"></div>
         
         
 

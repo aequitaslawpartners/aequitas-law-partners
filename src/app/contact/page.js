@@ -133,8 +133,8 @@ export default function ContactPage() {
                       </svg>
                       <div>
                         <p className="text-gray-700">407, 4th Floor, Above Axis Bank</p>
-                        <p className="text-gray-700">Laxmi Industrial Estate, Off New Link Road</p>
-                        <p className="text-gray-700">Andheri West, Mumbai, Maharashtra - 400053</p>
+                        <p className="text-gray-700">Laxmi Industrial Estate, New Link Road</p>
+                        <p className="text-gray-700">Andheri (W), Mumbai, Maharashtra - 400053</p>
                       </div>
                     </div>
                     <div className="flex items-center">
