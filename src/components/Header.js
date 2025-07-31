@@ -60,46 +60,46 @@ export default function Header() {
             </div> */}
           </Link>
           
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-16">
             <Link 
               href="/about" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
-              About Us
+              About ALP
             </Link>
             <Link 
               href="/expertise" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               Expertise
             </Link>
             <Link 
               href="/people" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               People
             </Link>
-            <Link 
+            {/* <Link 
               href="/publications" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               Publications
             </Link>
             <Link 
               href="/awards" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               Awards and Recognitions
-            </Link>
+            </Link> */}
             <Link 
               href="/careers" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               Careers
             </Link>
             <Link 
               href="/contact" 
-              className="professional-link nav-link-animation text-base font-medium"
+              className="professional-link nav-link-animation text-xl font-medium"
             >
               Contact Us
             </Link>
@@ -120,11 +120,11 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 items-end">
-              <Link href="/about" className="professional-link text-base font-medium">About Us</Link>
+              <Link href="/about" className="professional-link text-base font-medium">About ALP</Link>
               <Link href="/expertise" className="professional-link text-base font-medium">Expertise</Link>
               <Link href="/people" className="professional-link text-base font-medium">People</Link>
-              <Link href="/publications" className="professional-link text-base font-medium">Publications</Link>
-              <Link href="/awards" className="professional-link text-base font-medium">Awards and Recognitions</Link>
+              {/* <Link href="/publications" className="professional-link text-base font-medium">Publications</Link>
+              <Link href="/awards" className="professional-link text-base font-medium">Awards and Recognitions</Link> */}
               <Link href="/careers" className="professional-link text-base font-medium">Careers</Link>
               <Link href="/contact" className="professional-link text-base font-medium">Contact Us</Link>
             </div>

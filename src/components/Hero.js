@@ -58,11 +58,6 @@ export default function Hero() {
       ></div>
 
       {/* Floating Background Elements with Scroll Response */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-white opacity-5 rounded-full"
-           style={{ 
-             transform: `translate(${scrollY * 0.3}px, ${scrollY * 0.2}px) rotate(${scrollY * 0.1}deg)`,
-             opacity: Math.max(0.02, 0.05 - scrollY * 0.00005)
-           }}></div>
       <div className="absolute bottom-32 left-16 w-24 h-24 bg-white opacity-3 rounded-full"
            style={{ 
              transform: `translate(${-scrollY * 0.2}px, ${scrollY * 0.15}px) rotate(${-scrollY * 0.05}deg)`,
@@ -74,31 +69,6 @@ export default function Hero() {
              opacity: Math.max(0.02, 0.04 - scrollY * 0.00004)
            }}></div>
 
-      {/* Visible Scroll Indicators */}
-      <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-        <div className="w-2 h-32 bg-white opacity-20 rounded-full">
-          <div 
-            className="w-full bg-blue-300 rounded-full transition-all duration-100"
-            style={{ height: `${Math.min(100, scrollProgress * 3)}%` }}
-          ></div>
-        </div>
-      </div>
-
-      <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-        <div className="flex flex-col space-y-2">
-          {[...Array(5)].map((_, i) => (
-            <div 
-              key={i}
-              className="w-3 h-3 rounded-full border-2 border-white transition-all duration-300"
-              style={{ 
-                backgroundColor: scrollY > i * 100 ? 'white' : 'transparent',
-                transform: `scale(${1 + (scrollY * 0.001)})`,
-                opacity: Math.max(0.3, 1 - scrollY * 0.001)
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
 
       {/* Content - Always Visible */}
       <div ref={heroRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
