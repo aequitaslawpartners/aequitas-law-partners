@@ -71,7 +71,7 @@ export default function DisclaimerModal() {
 
             <ul className="space-y-3 ml-2 md:ml-4">
               <li className="flex items-start">
-                <span className="text-secondary-500 font-bold mr-2 mt-1">•</span>
+                <span className="text-secondary-500 text-xl font-bold mr-2 mt-1">•</span>
                 <span>
                   This website (www.alplaw.in) is owned and operated by Aequitas Law Partners LLP
                   ("ALP") and is a resource for your informational and educational purposes only.
@@ -79,7 +79,7 @@ export default function DisclaimerModal() {
               </li>
 
               <li className="flex items-start">
-                <span className="text-secondary-500 font-bold mr-2 mt-1">•</span>
+                <span className="text-secondary-500 text-xl font-bold mr-2 mt-1">•</span>
                 <span>
                   ALP assumes no liability for the interpretation and/or use of the content and/or
                   information contained on this website, nor does it offer any warranty of any kind, either
@@ -88,7 +88,7 @@ export default function DisclaimerModal() {
               </li>
 
               <li className="flex items-start">
-                <span className="text-secondary-500 font-bold mr-2 mt-1">•</span>
+                <span className="text-secondary-500 text-xl font-bold mr-2 mt-1">•</span>
                 <span>
                   By clicking 'I agree' and proceeding further, you acknowledge, represent and undertake
                   that you on your own accord wish to know more about ALP, its capabilities and
@@ -102,7 +102,7 @@ export default function DisclaimerModal() {
               </li>
 
               <li className="flex items-start">
-                <span className="text-secondary-500 font-bold mr-2 mt-1">•</span>
+                <span className="text-secondary-500 text-xl font-bold mr-2 mt-1">•</span>
                 <span>
                   This website is not intended to be, and you should not consider the content or
                   information contained herein to be an advertisement, solicitation, inducement or
