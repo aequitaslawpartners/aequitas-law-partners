@@ -70,19 +70,24 @@ const getIcon = (iconName, className = "w-8 h-8") => {
       </svg>
     ),
     'exclamation-triangle': (
-      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 20c0-4 3-7 8-7s8 3 8 7" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14l1-1h6l1 1" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 15v1M14 15v1" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16h2" />
-      </svg>
+      <img 
+        src="/expertise/white-collar-crime.png" 
+        alt="White Collar Crime" 
+        className={`${className} object-contain white-collar-icon`}
+        style={{
+          filter: 'brightness(0) saturate(100%) invert(8%) sepia(90%) saturate(4000%) hue-rotate(210deg) brightness(85%) contrast(120%)'
+        }}
+      />
     ),
     'gavel': (
-      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M0 0 C1.46875 2.203125 1.46875 2.203125 3 5 C4.45030963 6.62897097 5.95262107 8.21293693 7.5 9.75 C8.2734375 10.52859375 9.046875 11.3071875 9.84375 12.109375 C11.94285879 14.19632617 11.94285879 14.19632617 15 15 C14.49517742 19.29475923 13.23082796 21.33731829 10.1875 24.375 C9.50042969 25.08398438 8.81335938 25.79296875 8.10546875 26.5234375 C6 28 6 28 3.98828125 27.9765625 C1.46452667 26.73699738 -0.12648555 25.07424814 -2 23 C-2.75925781 23.83144531 -3.51851562 24.66289062 -4.30078125 25.51953125 C-5.30465114 26.61722075 -6.3085594 27.71487516 -7.3125 28.8125 C-7.81201172 29.35970703 -8.31152344 29.90691406 -8.82617188 30.47070312 C-10.21222531 31.98526483 -11.60586122 33.49287747 -13 35 C-13.55945312 35.61617187 -14.11890625 36.23234375 -14.6953125 36.8671875 C-16 38 -16 38 -18.5625 38.3125 C-21 38 -21 38 -23 36 C-23.41796875 33.16015625 -23.41796875 33.16015625 -23 30 C-20.98828125 27.62109375 -20.98828125 27.62109375 -18.3125 25.4375 C-17.40371094 24.674375 -16.49492187 23.91125 -15.55859375 23.125 C-14.71425781 22.42375 -13.86992187 21.7225 -13 21 C-11.28509926 19.37178655 -9.6445957 17.69941555 -8 16 C-9.65 14.68 -11.3 13.36 -13 12 C-12.43121059 8.23070895 -10.84778826 6.41522386 -8.1875 3.75 C-7.50042969 3.04359375 -6.81335938 2.3371875 -6.10546875 1.609375 C-4 0 -4 0 0 0 Z M-1.625 11.5 C-2.07875 11.995 -2.5325 12.49 -3 13 C-2.34 14.32 -1.68 15.64 -1 17 C0.32 17 1.64 17 3 17 C3.66 15.68 4.32 14.36 5 13 C3.62514468 11.45833358 3.62514468 11.45833358 2 10 C-0.12364481 9.77390663 -0.12364481 9.77390663 -1.625 11.5 Z " fill="#000000" transform="translate(29,6)"/>
-        <path d="M0 0 C6.6 0 13.2 0 20 0 C20 1.32 20 2.64 20 4 C13.4 4 6.8 4 0 4 C-0.33 3.34 -0.66 2.68 -1 2 C-0.67 1.34 -0.34 0.68 0 0 Z "/>
-      </svg>
+      <img 
+        src="/expertise/gavel.png" 
+        alt="Gavel" 
+        className={`${className} object-contain gavel-icon`}
+        style={{
+          filter: 'brightness(0) saturate(100%) invert(8%) sepia(90%) saturate(4000%) hue-rotate(210deg) brightness(85%) contrast(120%)'
+        }}
+      />
     )
   }
   
@@ -136,7 +141,7 @@ export default function PracticeAreas() {
               {/* Content */}
               <div className="p-4 sm:p-6 depth-layer-1 relative z-30 flex flex-col justify-between h-full">
                 <div className="flex items-start mb-3">
-                  <div className="text-primary-900 group-hover:text-white transition-all duration-700 mr-3 flex-shrink-0 mt-1">
+                  <div className="text-primary-900 group-hover:text-white transition-all duration-700 mr-3 flex-shrink-0 mt-1 gavel-icon-container">
                     {getIcon(area.icon, "w-6 h-6 sm:w-8 sm:h-8")}
                   </div>
                   <h3 className="text-lg text-left sm:text-xl font-bold text-gray-900 group-hover:text-white transition-all duration-700 transform group-hover:translate-y-1 leading-tight line-clamp-2">
@@ -164,6 +169,16 @@ export default function PracticeAreas() {
           overflow: hidden;
           text-overflow: ellipsis;
           max-height: 3.5rem; /* Approximately 2 lines */
+        }
+        
+        .gavel-icon-container .gavel-icon,
+        .gavel-icon-container .white-collar-icon {
+          transition: filter 0.7s ease;
+        }
+        
+        .group:hover .gavel-icon-container .gavel-icon,
+        .group:hover .gavel-icon-container .white-collar-icon {
+          filter: brightness(0) saturate(100%) invert(100%) !important;
         }
       `}</style>
     </section>
