@@ -1,8 +1,64 @@
+'use client'
+
+import { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' })
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus({ type: 'error', message: result.error || 'Something went wrong. Please try again.' })
+      }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Network error. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <div className="min-h-screen bg-white">
       <Banner />
@@ -29,7 +85,18 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
-                <form className="space-y-6">
+                
+                {submitStatus && (
+                  <div className={`mb-6 p-4 rounded-lg ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-50 border border-green-200 text-green-700'
+                      : 'bg-red-50 border border-red-200 text-red-700'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -38,8 +105,12 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="firstName"
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div>
@@ -49,8 +120,12 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="lastName"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
@@ -62,8 +137,12 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -74,8 +153,12 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -84,9 +167,14 @@ export default function ContactPage() {
                       Subject *
                     </label>
                     <input
+                      type="text"
                       id="subject"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -96,18 +184,23 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
                       placeholder="Please describe your legal needs or questions..."
                       required
+                      disabled={isSubmitting}
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-primary-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-secondary-500 transition-colors"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-secondary-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
