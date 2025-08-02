@@ -1,8 +1,9 @@
 import { connectToDatabase } from '../../../../../lib/mongodb'
-import { downloadFileFromGridFS, getFileInfoFromGridFS } from '../../../../../lib/gridfs'
 import { getTokenFromRequest, verifyToken } from '../../../../../lib/auth'
 import { NextResponse } from 'next/server'
 import { ObjectId } from 'mongodb'
+import pako from 'pako'
+import { formatISTDateForLog } from '../../../../../lib/dateUtils'
 
 export async function GET(request, { params }) {
   try {
@@ -40,24 +41,52 @@ export async function GET(request, { params }) {
       )
     }
 
-    if (!application.resumeFileId) {
+    if (!application.resume) {
       return NextResponse.json(
         { success: false, message: 'No resume found for this application' },
         { status: 404 }
       )
     }
 
-    // Get file info from GridFS
-    const fileInfo = await getFileInfoFromGridFS(application.resumeFileId)
-    if (!fileInfo) {
+    console.log(`[${formatISTDateForLog(new Date())}] Processing download request:`, {
+      applicationId: id,
+      applicant: `${application.firstName} ${application.lastName}`,
+      hasResume: !!application.resume,
+      isCompressed: !!application.resumeCompressed,
+      compressionVersion: application.compressionVersion
+    })
+
+    let fileBuffer
+    
+    try {
+      if (application.resumeCompressed && application.compressionVersion === 2) {
+        // Version 2: Decompress the compressed binary data
+        console.log(`[${formatISTDateForLog(new Date())}] Decompressing version 2 resume data`)
+        const compressedBuffer = Buffer.from(application.resume, 'base64')
+        fileBuffer = Buffer.from(pako.inflate(compressedBuffer))
+        
+        console.log(`[${formatISTDateForLog(new Date())}] Decompression successful:`, {
+          compressedSize: `${(compressedBuffer.length / 1024).toFixed(1)} KB`,
+          decompressedSize: `${(fileBuffer.length / 1024).toFixed(1)} KB`,
+          expansionRatio: `${((fileBuffer.length / compressedBuffer.length) * 100).toFixed(1)}%`
+        })
+      } else if (application.resumeCompressed && application.compressionVersion === 1) {
+        // Version 1: Legacy compressed base64 string
+        console.log(`[${formatISTDateForLog(new Date())}] Decompressing version 1 resume data`)
+        const decompressedBase64 = pako.inflate(Buffer.from(application.resume, 'base64'), { to: 'string' })
+        fileBuffer = Buffer.from(decompressedBase64, 'base64')
+      } else {
+        // Uncompressed base64 data
+        console.log(`[${formatISTDateForLog(new Date())}] Processing uncompressed resume data`)
+        fileBuffer = Buffer.from(application.resume, 'base64')
+      }
+    } catch (decompressError) {
+      console.error(`[${formatISTDateForLog(new Date())}] Error processing resume data:`, decompressError)
       return NextResponse.json(
-        { success: false, message: 'Resume file not found in storage' },
-        { status: 404 }
+        { success: false, message: 'Error processing resume file' },
+        { status: 500 }
       )
     }
-
-    // Download file buffer from GridFS
-    const fileBuffer = await downloadFileFromGridFS(application.resumeFileId)
     
     // Return file as direct download
     return new NextResponse(fileBuffer, {
