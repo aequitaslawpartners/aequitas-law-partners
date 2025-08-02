@@ -13,7 +13,6 @@ export const metadata = {
   description: "Aequitas Law Partners (ALP) - Elevating justice in business through expert corporate law, startup legal services, M&A, banking & finance and intellectual property counsel. Serving clients across Mumbai, Delhi and Bangalore.",
   keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers, Delhi law firm, Bangalore legal services",
   authors: [{ name: "Aequitas Law Partners" }],
-  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "Aequitas Law Partners - Expert Legal Counsel for Corporate & Startup Clients",
     description: "Leading law firm providing strategic legal counsel in corporate law, startup services, M&A, banking & finance. Equity, justice, fairness in every engagement.",
@@ -42,6 +41,11 @@ export const metadata = {
   alternates: {
     canonical: "https://www.alplaw.in"
   }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
