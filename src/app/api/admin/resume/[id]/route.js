@@ -67,21 +67,10 @@ export async function GET(request, { params }) {
           // New compression method: decompress binary PDF data
           const decompressedBuffer = pako.inflate(compressedBuffer)
           resumeData = Buffer.from(decompressedBuffer).toString('base64')
-          console.log(`[${formatISTDateForLog(new Date())}] Decompressed resume (v2):`, {
-            user: `${application.firstName} ${application.lastName}`,
-            compressed: `${(application.resume.length / 1024).toFixed(1)} KB`,
-            decompressed: `${(resumeData.length / 1024).toFixed(1)} KB`,
-            originalPDFSize: `${(application.originalSize / 1024).toFixed(1)} KB`
-          })
         } else {
           // Legacy compression method: decompress base64 string
           const decompressedBuffer = pako.inflate(compressedBuffer)
           resumeData = Buffer.from(decompressedBuffer).toString()
-          console.log(`[${formatISTDateForLog(new Date())}] Decompressed resume (v1):`, {
-            user: `${application.firstName} ${application.lastName}`,
-            compressed: `${(application.resume.length / 1024).toFixed(1)} KB`,
-            decompressed: `${(resumeData.length / 1024).toFixed(1)} KB`
-          })
         }
       } catch (error) {
         console.error(`[${formatISTDateForLog(new Date())}] Decompression error:`, error)

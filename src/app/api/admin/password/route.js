@@ -60,7 +60,6 @@ export async function PUT(request) {
     // Verify current password
     const isCurrentPasswordValid = await bcryptjs.compare(currentPassword, currentUser.password)
     if (!isCurrentPasswordValid) {
-      console.log(`[${formatISTDateForLog(new Date())}] Invalid current password attempt by:`, user.email)
       return NextResponse.json(
         { success: false, message: 'Current password is incorrect' },
         { status: 400 }
@@ -88,7 +87,6 @@ export async function PUT(request) {
       )
     }
 
-    console.log(`[${formatISTDateForLog(new Date())}] Password updated successfully for:`, user.email)
 
     return NextResponse.json({
       success: true,

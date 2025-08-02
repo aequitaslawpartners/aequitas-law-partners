@@ -43,14 +43,6 @@ export async function POST(request) {
     // Insert into MongoDB
     const result = await collection.insertOne(contactData)
 
-    console.log(`[${formatISTDateForLog(new Date())}] Contact form submitted:`, {
-      name: `${firstName} ${lastName}`,
-      email,
-      subject,
-      contactId: result.insertedId,
-      submittedAt: formatISTDateForLog(contactData.createdAt)
-    })
-
     return Response.json(
       { 
         success: true, 

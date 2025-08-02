@@ -48,36 +48,22 @@ export async function GET(request, { params }) {
       )
     }
 
-    console.log(`[${formatISTDateForLog(new Date())}] Processing download request:`, {
-      applicationId: id,
-      applicant: `${application.firstName} ${application.lastName}`,
-      hasResume: !!application.resume,
-      isCompressed: !!application.resumeCompressed,
-      compressionVersion: application.compressionVersion
-    })
 
     let fileBuffer
     
     try {
       if (application.resumeCompressed && application.compressionVersion === 2) {
         // Version 2: Decompress the compressed binary data
-        console.log(`[${formatISTDateForLog(new Date())}] Decompressing version 2 resume data`)
         const compressedBuffer = Buffer.from(application.resume, 'base64')
         fileBuffer = Buffer.from(pako.inflate(compressedBuffer))
         
-        console.log(`[${formatISTDateForLog(new Date())}] Decompression successful:`, {
-          compressedSize: `${(compressedBuffer.length / 1024).toFixed(1)} KB`,
-          decompressedSize: `${(fileBuffer.length / 1024).toFixed(1)} KB`,
-          expansionRatio: `${((fileBuffer.length / compressedBuffer.length) * 100).toFixed(1)}%`
-        })
+
       } else if (application.resumeCompressed && application.compressionVersion === 1) {
         // Version 1: Legacy compressed base64 string
-        console.log(`[${formatISTDateForLog(new Date())}] Decompressing version 1 resume data`)
         const decompressedBase64 = pako.inflate(Buffer.from(application.resume, 'base64'), { to: 'string' })
         fileBuffer = Buffer.from(decompressedBase64, 'base64')
       } else {
         // Uncompressed base64 data
-        console.log(`[${formatISTDateForLog(new Date())}] Processing uncompressed resume data`)
         fileBuffer = Buffer.from(application.resume, 'base64')
       }
     } catch (decompressError) {
