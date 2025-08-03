@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import DisclaimerModal from "@/components/DisclaimerModal";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} antialiased smooth-scroll gpu-accelerated`}>
         <DisclaimerModal />
         {children}
+        <Analytics />
       </body>
     </html>
   );
