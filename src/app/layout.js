@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Aequitas Law Partners | Corporate & Startup Legal Services | Mumbai, Delhi, Bangalore",
-  description: "Aequitas Law Partners (ALP) - Elevating justice in business through expert corporate law, startup legal services, M&A, banking & finance and intellectual property counsel. Serving clients across Mumbai, Delhi and Bangalore.",
+  title: "Aequitas Law Partners | Full Service Law Firm | Mumbai, Delhi, Bangalore",
+  description: "Aequitas Law Partners - A full service law firm headquartered at Mumbai, India that delivers comprehensive legal solutions across diverse practice areas, with unwavering precision at every stage.",
   keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers, Delhi law firm, Bangalore legal services",
   authors: [{ name: "Aequitas Law Partners" }],
   openGraph: {
@@ -40,7 +40,11 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://www.alplaw.in"
-  }
+  },
+  // TODO: Add Google Site Verification when setting up Search Console
+  // other: {
+  //   'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || '',
+  // }
 };
 
 export const viewport = {
@@ -55,6 +59,9 @@ export default function RootLayout({ children }) {
         {/* Theme color */}
         <meta name="theme-color" content="#0c3065" />
         <meta name="msapplication-TileColor" content="#0c3065" />
+        
+        {/* Sitemap */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         
         {/* Additional SEO tags */}
         <meta name="geo.region" content="IN" />

@@ -12,7 +12,7 @@ export default function Footer() {
 
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center lg:justify-end space-x-6 text-sm text-blue-300">
-              <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+              <a href="/sitemap.xml" className="hover:text-white transition-colors" target="_blank" rel="noopener">Sitemap</a>
             </div>
           </div>
         </div>
