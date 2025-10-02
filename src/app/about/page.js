@@ -39,7 +39,7 @@ export default function AboutPage() {
     // Define words to highlight for each section
     const wordsToHighlight = {
       'A': ['Accountability', 'Precision'],
-      'L': ['Insight', 'Innovation'], 
+      'L': ['Insight', 'Innovation', 'Innovative'], 
       'P': ['Partnership', 'Equity']
     }
     
