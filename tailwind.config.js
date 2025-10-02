@@ -47,8 +47,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
-        athelas: ['Athelas Bold', 'serif'],
-        primary: ['Athelas Bold', 'var(--font-inter)', 'Inter', 'serif'],
+        lora: ['var(--font-lora)', 'Lora', 'serif'],
+        primary: ['var(--font-lora)', 'Lora', 'var(--font-inter)', 'Inter', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

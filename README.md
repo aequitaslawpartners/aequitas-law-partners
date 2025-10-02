@@ -16,7 +16,7 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 - **Framework**: Next.js 15 with App Router
 - **Language**: JavaScript (ES6+)
 - **Styling**: Tailwind CSS
-- **Font**: Athelas
+- **Font**: Lora (Google Font)
 - **Build Tool**: Turbopack
 - **Package Manager**: npm
 
@@ -25,7 +25,7 @@ A professional, responsive website for **Aequitas Law Partners (ALP)**, a leadin
 ### Brand Identity
 - **Primary Colors**: Deep blue (#0c3065)
 - **Logo**: Mountain-inspired geometric design representing "ALP"
-- **Typography**: Modern Inter Athelas family for professional appearance
+- **Typography**: Modern Inter and Lora family for professional appearance
 - **Theme**: Alpine/mountain motif throughout the design
 
 ### Key Sections

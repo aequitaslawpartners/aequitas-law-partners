@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import DisclaimerModal from "@/components/DisclaimerModal";
 import { Analytics } from "@vercel/analytics/next";
@@ -9,10 +9,16 @@ const inter = Inter({
   display: "swap",
 });
 
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata = {
-  title: "Aequitas Law Partners | Full Service Law Firm | Mumbai, Delhi, Bangalore",
+  title: "Aequitas Law Partners | Full Service Law Firm | Mumbai",
   description: "Aequitas Law Partners - A full service law firm headquartered at Mumbai, India that delivers comprehensive legal solutions across diverse practice areas, with unwavering precision at every stage.",
-  keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers, Delhi law firm, Bangalore legal services",
+  keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers",
   authors: [{ name: "Aequitas Law Partners" }],
   openGraph: {
     title: "Aequitas Law Partners - Expert Legal Counsel for Corporate & Startup Clients",
@@ -71,7 +77,7 @@ export default function RootLayout({ children }) {
         <meta name="coverage" content="India" />
         <meta name="target" content="Corporate Clients, Startups, Entrepreneurs" />
       </head>
-      <body className={`${inter.variable} antialiased smooth-scroll gpu-accelerated`}>
+      <body className={`${inter.variable} ${lora.variable} antialiased smooth-scroll gpu-accelerated`}>
         <DisclaimerModal />
         {children}
         <Analytics />

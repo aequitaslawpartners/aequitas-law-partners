@@ -18,18 +18,18 @@ export default function AboutALP() {
           <div ref={sectionRef}>
             {/* About ALP Section */}
             <div className="mb-16 text-center">
-              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-athelas block mb-6">
+              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
                 About ALP
               </span>
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-athelas mb-8"
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-lora mb-8"
                     style={{ 
                       transform: `translateX(${Math.max(0, 200 - scrollY * 0.5)}px)`,
                       opacity: Math.min(1, scrollY * 0.005)
                     }}>
                   Aequitas Law Partners (ALP), a firm inspired by the strength and timeless resilience of the Alps, is built for impact. We are designed to achieve unparalleled outcomes through sharp insight, precision and seamless execution. At ALP, we combine legal excellence with...
                 </p>
-                <a href='/about' className="inline-block cursor-pointer transition-all duration-300 text-primary-900 border-2 border-primary-900 px-8 py-3 rounded-lg font-athelas font-semibold hover:bg-primary-900 hover:text-white transform hover:-translate-y-1 hover:shadow-lg">
+                <a href='/about' className="inline-block cursor-pointer transition-all duration-300 text-primary-900 border-2 border-primary-900 px-8 py-3 rounded-lg font-lora font-semibold hover:bg-primary-900 hover:text-white transform hover:-translate-y-1 hover:shadow-lg">
                   Read More
                 </a>
               </div>
@@ -37,11 +37,11 @@ export default function AboutALP() {
 
             {/* Expertise Section */}
             <div className="mb-16 text-center">
-              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-athelas block mb-6">
+              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
                 Expertise
               </span>
               <div className="max-w-6xl mx-auto">
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-athelas mb-12"
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-lora mb-12"
                     style={{ 
                       transform: `translateX(${Math.max(0, 200 - scrollY * 0.5)}px)`,
                       opacity: Math.min(1, scrollY * 0.005)
@@ -64,7 +64,7 @@ export default function AboutALP() {
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 z-20"></div>
                       
                       <div className="relative z-20 text-center flex flex-col justify-center h-full">
-                        <h3 className="text-lg text-primary-900 font-athelas group-hover:text-white transition-all duration-700">
+                        <h3 className="text-lg text-primary-900 font-lora group-hover:text-white transition-all duration-700">
                           {area.title}
                         </h3>
                       </div>
@@ -72,7 +72,7 @@ export default function AboutALP() {
                   ))}
                 </div>
 
-                <a href='/expertise' className="inline-block cursor-pointer transition-all duration-300 text-primary-900 border-2 border-primary-900 px-8 py-3 rounded-lg font-athelas font-semibold hover:bg-primary-900 hover:text-white transform hover:-translate-y-1 hover:shadow-lg">
+                <a href='/expertise' className="inline-block cursor-pointer transition-all duration-300 text-primary-900 border-2 border-primary-900 px-8 py-3 rounded-lg font-lora font-semibold hover:bg-primary-900 hover:text-white transform hover:-translate-y-1 hover:shadow-lg">
                   View All Practice Areas
                 </a>
               </div>
