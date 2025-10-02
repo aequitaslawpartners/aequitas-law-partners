@@ -18,7 +18,7 @@ export default function AboutALP() {
           <div ref={sectionRef}>
             {/* About ALP Section */}
             <div className="mb-16 text-center">
-              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
+              <span className="text-3xl font-bold md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
                 About ALP
               </span>
               <div className="max-w-4xl mx-auto">
@@ -37,7 +37,7 @@ export default function AboutALP() {
 
             {/* Expertise Section */}
             <div className="mb-16 text-center">
-              <span className="text-3xl md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
+              <span className="text-3xl font-bold md:text-4xl text-primary-900 uppercase tracking-wide font-lora block mb-6">
                 Expertise
               </span>
               <div className="max-w-6xl mx-auto">

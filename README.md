@@ -1,6 +1,6 @@
 # Aequitas Law Partners Website
 
-A professional, responsive website for **Aequitas Law Partners (ALP)**, a leading law firm specializing in corporate and startup legal services across India.
+A professional, responsive website for **Aequitas Law Partners (ALP)**, a leading law firm specializing in corporate legal services across India.
 
 ## 🏔️ About Aequitas Law Partners
 
@@ -113,7 +113,6 @@ src/
 ## 📊 Practice Areas Covered
 
 1. **Corporate Law & M&A** - Strategic mergers and acquisitions
-2. **Startup & Venture Capital** - Emerging company legal support
 3. **Banking & Finance** - Financial regulations and transactions
 4. **Capital Markets** - Public offerings and securities law
 5. **Technology & IP Law** - Intellectual property protection

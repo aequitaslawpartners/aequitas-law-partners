@@ -16,13 +16,13 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: "Aequitas Law Partners | Full Service Law Firm | Mumbai",
+  title: "Aequitas Law Partners | Full Service Law Firm | India",
   description: "Aequitas Law Partners - A full service law firm headquartered at Mumbai, India that delivers comprehensive legal solutions across diverse practice areas, with unwavering precision at every stage.",
-  keywords: "corporate law, startup legal services, M&A lawyers, banking finance law, intellectual property, venture capital, legal counsel India, Mumbai lawyers",
+  keywords: "corporate law, M&A lawyers, intellectual property, venture capital, legal counsel India, Mumbai lawyers",
   authors: [{ name: "Aequitas Law Partners" }],
   openGraph: {
-    title: "Aequitas Law Partners - Expert Legal Counsel for Corporate & Startup Clients",
-    description: "Leading law firm providing strategic legal counsel in corporate law, startup services, M&A, banking & finance. Equity, justice, fairness in every engagement.",
+    title: "Aequitas Law Partners - Expert Legal Counsel for Corporate clients",
+    description: "Leading law firm providing strategic legal counsel in corporate law, M&A, private equity, alternative investment funds and venture capital.",
     url: "https://www.alplaw.in",
     siteName: "Aequitas Law Partners",
     locale: "en_IN",

@@ -146,7 +146,7 @@ export default function CareersPage() {
               Careers
             </h1>
             <p className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Join our dynamic team and build an exceptional legal career with ALP
+              Join our dynamic team and build an exceptional legal career with Aequitas Law Partners
             </p>
           </div>
         </section>
