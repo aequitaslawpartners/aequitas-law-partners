@@ -26,11 +26,23 @@ export async function GET(request) {
 
     const { db } = await connectToDatabase()
     
-    // Get contacts
-    const contacts = await db.collection('contacts').find({}).sort({ createdAt: -1 }).toArray()
+    // Ensure indexes exist for better performance
+    await db.collection('contacts').createIndex({ createdAt: -1 })
+    await db.collection('recruitment').createIndex({ createdAt: -1 })
     
-    // Get recruitment applications
-    const applications = await db.collection('recruitment').find({}).sort({ createdAt: -1 }).toArray()
+    // Get contacts - limit to last 1000 entries
+    const contacts = await db.collection('contacts')
+      .find({})
+      .sort({ createdAt: -1 })
+      .limit(1000)
+      .toArray()
+    
+    // Get recruitment applications - limit to last 1000 entries
+    const applications = await db.collection('recruitment')
+      .find({})
+      .sort({ createdAt: -1 })
+      .limit(1000)
+      .toArray()
     
     return NextResponse.json({
       success: true,

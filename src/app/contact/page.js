@@ -80,22 +80,87 @@ export default function ContactPage() {
         {/* Contact Information */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              
+            <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12">
+              {/* Contact Information & Offices */}
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Office</h2>
+
+                {/* Mumbai Office */}
+                <div className="mb-8 p-6 bg-gray-50 rounded-lg">
+                  <h3 className="text-xl font-semibold text-primary-900 mb-4">Mumbai Office</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <svg className="w-5 h-5 text-secondary-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      <div>
+                        <a href="https://maps.app.goo.gl/guJU4tQPLRmBqt958" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-secondary-500 transition-colors">
+                          <p>Tejaswini Tower, 201, 2nd Floor</p>
+                          <p>Manipada Road, Opp. Vidyanagari Marg</p>
+                          <p>Kalina, Santacruz (E), Mumbai - 400098</p>
+                          <p>Maharashtra, India</p>
+                        </a>
+                      </div>
+                    </div>
+                    {/* <div className="flex items-center">
+                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <p className="text-gray-700">+91 9920175277</p>
+                    </div> */}
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                      <a href="mailto:info@alplaw.in" className="text-gray-700 hover:text-secondary-500 transition-colors">info@alplaw.in</a>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                      <a
+                        href="https://www.linkedin.com/company/aequitas-law-partners/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 hover:text-secondary-500 transition-colors"
+                        title="Follow us on LinkedIn"
+                      >
+                        Aequitas Law Partners
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Google Maps Embed */}
+                  <div className="mt-6">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8988795582406!2d72.85881727514331!3d19.072891382118745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c961b92b220f%3A0x7be17cd52fe1384d!2sAequitas%20Law%20Partners!5e0!3m2!1sen!2sin!4v1765121148407!5m2!1sen!2sin"
+                      width="100%"
+                      height="450"
+                      style={{ border: 0, borderRadius: '0.5rem' }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Aequitas Law Partners Office Location"
+                    ></iframe>
+                  </div>
+                </div>
+
+              </div>
+
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
-                
+
                 {submitStatus && (
-                  <div className={`mb-6 p-4 rounded-lg ${
-                    submitStatus.type === 'success' 
-                      ? 'bg-green-50 border border-green-200 text-green-700'
-                      : 'bg-red-50 border border-red-200 text-red-700'
-                  }`}>
+                  <div className={`mb-6 p-4 rounded-lg ${submitStatus.type === 'success'
+                    ? 'bg-green-50 border border-green-200 text-green-700'
+                    : 'bg-red-50 border border-red-200 text-red-700'
+                    }`}>
                     {submitStatus.message}
                   </div>
                 )}
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -129,7 +194,7 @@ export default function ContactPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -145,7 +210,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number *
@@ -161,7 +226,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                       Subject *
@@ -177,7 +242,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
@@ -194,7 +259,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                     ></textarea>
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -203,63 +268,6 @@ export default function ContactPage() {
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
-              </div>
-
-              {/* Contact Information & Offices */}
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Office</h2>
-                
-                {/* Mumbai Office */}
-                <div className="mb-8 p-6 bg-gray-50 rounded-lg">
-                  <h3 className="text-xl font-semibold text-primary-900 mb-4">Mumbai Office</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <svg className="w-5 h-5 text-secondary-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                      <div>
-                        <p className="text-gray-700">407, 4th Floor, Above Axis Bank</p>
-                        <p className="text-gray-700">Laxmi Industrial Estate, New Link Road</p>
-                        <p className="text-gray-700">Andheri (W), Mumbai - 400053</p>
-                        <p className="text-gray-700">Maharashtra, India</p>
-                      </div>
-                    </div>
-                    {/* <div className="flex items-center">
-                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                      </svg>
-                      <p className="text-gray-700">+91 9920175277</p>
-                    </div> */}
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                      </svg>
-                      <p className="text-gray-700">info@alplaw.in</p>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 text-secondary-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                      <a 
-                        href="https://www.linkedin.com/company/aequitas-law-partners/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-secondary-500 transition-colors"
-                        title="Follow us on LinkedIn"
-                      >
-                        Aequitas Law Partners
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* General Contact */}
-                {/* <div className="mt-8 text-center p-6 bg-primary-50 rounded-lg">
-                  <h3 className="text-lg font-semibold text-primary-900 mb-2">General Inquiries</h3>
-                  <p className="text-gray-700 mb-2">info@alplaw.in</p>
-                  <p className="text-gray-700">+91 9920175277</p>
-                </div> */}
               </div>
             </div>
           </div>
