@@ -6,8 +6,9 @@ import Banner from '@/components/Banner'
 import { peopleData } from '@/data/people'
 import { practiceAreasData } from '@/data/practiceAreas'
 
-export default function PersonPage({ params }) {
-  const person = peopleData.find(p => p.id === params.id)
+export default async function PersonPage({ params }) {
+  const { id } = await params
+  const person = peopleData.find(p => p.id === id)
   
   if (!person) {
     notFound()
