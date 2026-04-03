@@ -120,9 +120,9 @@ export const peopleData = [
   {
     id: "abhishek-pai",
     name: "Abhishek Pai",
-    designation: "Partner",
+    designation: "Founding Partner",
     email: "abhishek.pai@alplaw.in",
-    image: "/people/Abhishek Pai - Partner.png",
+    image: "/people/Abhishek Pai - Founding Partner.png",
     linkedin: "linkedin.com/in/abhishek-pai-303720118/",
     vcard: "/vcards/abhishek-pai.vcf",
     bio: "Abhishek Pai is a seasoned corporate counsel and qualified Company Secretary whose practice bridges strategic advisory and courtroom advocacy. He has guided listed companies and international investors on governance, regulatory compliance, and complex cross-border transactions. A former litigator before Mumbai’s trial courts and the appellate courts, Abhishek handled commercial disputes, from fraud and inter-promoter conflicts to succession and investor litigation, bringing those insights to his transactional work.<br><br> At Aequitas Law Partners, he structures and executes venture capital and private equity deals, scheme-based mergers (NCLT-sanctioned), joint ventures, demergers, asset and share acquisitions. He also advises on hotel management and ISDA agreements, and ensures robust SEBI, RBI and RoC compliance. <br><br> Abhishek’s sector-agnostic expertise spans mining, pharmaceuticals, fintech, IT, hospitality, real estate, infrastructure, power and manufacturing sectors, gaming, logistics, banking and payments, industrial procurement, human resource management, textile, industrial automation and beyond, making him a trusted advisor in high-stakes transactions.",
