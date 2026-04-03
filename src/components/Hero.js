@@ -2,13 +2,14 @@
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useSimpleScroll } from '@/hooks/useSimpleScroll'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function Hero() {
   const [heroRef, heroVisible] = useScrollAnimation({ threshold: 0.1 })
   const [isInitialLoad, setIsInitialLoad] = useState(true)
   const scrollY = useSimpleScroll()
   const [scrollProgress, setScrollProgress] = useState(0)
+  const videoRef = useRef(null)
 
   useEffect(() => {
     // Set initial load to false after component mounts
@@ -25,6 +26,51 @@ export default function Hero() {
     }
   }, [scrollY])
 
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    // iOS Safari can be strict about autoplay; enforce muted inline playback before play().
+    video.muted = true
+    video.defaultMuted = true
+    video.playsInline = true
+
+    const tryPlay = async () => {
+      try {
+        await video.play()
+      } catch {
+        // Ignore blocked attempts; user interaction/page visibility handlers retry.
+      }
+    }
+
+    const handleEnded = () => {
+      video.currentTime = 0
+      void tryPlay()
+    }
+
+    const handleVisibility = () => {
+      if (!document.hidden) {
+        void tryPlay()
+      }
+    }
+
+    void tryPlay()
+
+    video.addEventListener('canplay', tryPlay)
+    video.addEventListener('ended', handleEnded)
+    document.addEventListener('visibilitychange', handleVisibility)
+    window.addEventListener('pageshow', tryPlay)
+    window.addEventListener('touchstart', tryPlay, { passive: true })
+
+    return () => {
+      video.removeEventListener('canplay', tryPlay)
+      video.removeEventListener('ended', handleEnded)
+      document.removeEventListener('visibilitychange', handleVisibility)
+      window.removeEventListener('pageshow', tryPlay)
+      window.removeEventListener('touchstart', tryPlay)
+    }
+  }, [])
+
   // Show animations on initial load or when visible
   const shouldShowAnimation = isInitialLoad || heroVisible
 
@@ -32,6 +78,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center bg-blue-900 overflow-hidden">
       {/* Video Background */}
       <video 
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         style={{
           transform: `translateY(${scrollY * 0.5}px)`,
@@ -40,8 +87,12 @@ export default function Hero() {
         autoPlay
         loop
         muted
+        defaultMuted
         playsInline
+        disablePictureInPicture
+        controls={false}
         preload="auto"
+        {...{ 'webkit-playsinline': 'true' }}
       >
         <source src="/peak3.mp4" type="video/mp4" />
         <source src="/peak2.gif" type="image/gif" />
