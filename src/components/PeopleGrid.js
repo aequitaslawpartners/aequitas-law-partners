@@ -19,12 +19,13 @@ export default function PeopleGrid() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {peopleData.map((person, index) => (
+        <div className="flex flex-wrap justify-center gap-8">
+          {peopleData.map((person, index) => {
+            return (
             <Link 
               key={person.id}
               href={`/people/${person.id}`}
-              className="group"
+              className="group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
             >
               <div 
                 ref={setRef(index)}
@@ -72,7 +73,8 @@ export default function PeopleGrid() {
                 </div>
               </div>
             </Link>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

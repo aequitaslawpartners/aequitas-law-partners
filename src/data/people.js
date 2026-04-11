@@ -235,5 +235,28 @@ export const peopleData = [
     memberships: [
       "Member of Bar Council of Maharashtra and Goa",
     ]
-  }
+  },
+  {
+    id: "anku-adhikari",
+    name: "Anku Adhikari",
+    designation: "Principal Associate",
+    email: "anku.adhikari@alplaw.in",
+    linkedin: "linkedin.com/in/anku-adhikari-6814131bb",
+    vcard: "/vcards/anku-adhikari.vcf",
+    image: "/people/Anku Adhikari - Principal Associate.png",
+    bio: "Anku Adhikari is a part of the Investment Funds, Asset Management & Regulatory Practice Team at Aequitas Law Partners with experience in advising fund managers. She assists fund managers across the entire lifecycle of a fund, including setting up and registration of funds, capital raising, implementation of carried interest structures, offering co-investment arrangements, navigating regulatory actions, managing investor disputes and winding up of funds. She has advised funds across a wide range of strategies, including private equity, venture capital, fund-of-funds, angel funds, real estate and debt funds, as well as listed market long-only and hedge funds. She regularly advises on fund documentation, investor negotiations, regulatory strategy and ongoing compliance with SEBI and IFSCA. She also has significant experience in advising on the structuring of funds based out of the International Financial Services Centre (IFSC) at GIFT City, as well as India-focused offshore funds established in jurisdictions such as Singapore and Mauritius. She brings a nuanced understanding of SEBI’s evolving regulatory framework for AIFs and related intermediaries and is recognised for her practical and commercially oriented approach to fund structuring and compliance.",    
+    expertise: [
+      "Investment Funds, Asset Management and Regulatory Practice",
+      "General Corporate & Commercial Advisory",
+    ],
+    education: [
+      "B.A. LL.B. (Hons.) from NALSAR University of Law, Hyderabad (Class of 2021)",
+    ],
+    experience: "1 year",
+    languages: ["English", "Hindi", "Nepali"],
+    publications: [ ],
+    achievements: [],
+    personalNote: "Apart from my work, I am a true crime enthusiast and follow national, business and international affairs. When I step away from work, one will find me in the mountains, where the air is clear and the deadlines, for once, can wait.",
+    memberships: [ ]
+  },
 ]

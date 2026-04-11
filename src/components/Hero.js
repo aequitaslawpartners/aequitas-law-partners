@@ -87,7 +87,6 @@ export default function Hero() {
         autoPlay
         loop
         muted
-        defaultMuted
         playsInline
         disablePictureInPicture
         controls={false}
