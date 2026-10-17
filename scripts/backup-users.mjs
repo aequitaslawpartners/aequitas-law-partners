@@ -1,6 +1,7 @@
 import dotenv from 'dotenv'
 import { mkdir, writeFile, rename } from 'node:fs/promises'
 import { dirname, resolve, sep } from 'node:path'
+import { MAX_FILE_BYTES } from '../src/lib/uploadLimits.mjs'
 import { rows } from '../src/lib/supabase.mjs'
 
 dotenv.config({ path: '.env', quiet: true })
@@ -27,7 +28,7 @@ for (const user of users) {
       if (attempt >= 2 || (error.status && error.status !== 429 && error.status < 500)) throw error
     }
   }
-  if (!bytes.length || bytes.length > 204800) throw new Error('Photo backup exceeds the upload limit')
+  if (!bytes.length || bytes.length > MAX_FILE_BYTES) throw new Error('Photo backup exceeds the upload limit')
   await mkdir(dirname(target), { recursive: true })
   await writeFile(target, bytes)
 }

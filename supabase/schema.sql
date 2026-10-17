@@ -28,12 +28,15 @@ create table if not exists public.recruitment (
   email text not null, phone text not null, experience text not null, position text not null,
   specializations text[] not null check (cardinality(specializations) > 0),
   "resumePath" text unique,
-  "originalSize" integer check ("originalSize" > 0 and "originalSize" <= 204800),
+  "originalSize" integer,
   "resumeMigrationIssue" text,
   "coverLetter" text not null default '',
   status text not null default 'pending' check (status in ('pending', 'reviewed', 'contacted', 'rejected')),
   "createdAt" timestamptz not null default now(), "updatedAt" timestamptz, "updatedBy" text
 );
+alter table public.recruitment drop constraint if exists "recruitment_originalSize_check";
+alter table public.recruitment add constraint "recruitment_originalSize_check"
+  check ("originalSize" > 0 and "originalSize" <= 512000);
 alter table public.recruitment alter column "resumePath" drop not null;
 alter table public.recruitment alter column "originalSize" drop not null;
 alter table public.recruitment add column if not exists "resumeMigrationIssue" text;

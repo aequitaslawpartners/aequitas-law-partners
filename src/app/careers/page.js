@@ -38,8 +38,8 @@ export default function CareersPage() {
         setSubmitStatus({ type: 'error', message: 'Please upload a PDF file only.' })
         return
       }
-      if (file.size > MAX_FILE_BYTES) { // 200 KB
-        setSubmitStatus({ type: 'error', message: 'Maximum upload size is 200 KB.' })
+      if (file.size > MAX_FILE_BYTES) { // 500 KB
+        setSubmitStatus({ type: 'error', message: 'Maximum upload size is 500 KB.' })
         return
       }
       setSelectedFile(file)
@@ -341,7 +341,7 @@ export default function CareersPage() {
                         <p className="mb-2 text-sm text-gray-500">
                           <span className="font-semibold">Click to upload</span> or drag and drop
                         </p>
-                        <p className="text-xs text-gray-500">PDF only (MAX. 200 KB)</p>
+                        <p className="text-xs text-gray-500">PDF only (MAX. 500 KB)</p>
                       </div>
                       <input
                         id="resume"

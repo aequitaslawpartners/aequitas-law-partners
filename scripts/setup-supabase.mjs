@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises'
+import { MAX_FILE_BYTES } from '../src/lib/uploadLimits.mjs'
 import { databaseClient } from './supabase-db.mjs'
 import { supabaseRequest, RESUME_BUCKET } from '../src/lib/supabase.mjs'
 
@@ -14,10 +15,10 @@ try {
     const existing = buckets.find(item => item.id === bucket.id)
     await supabaseRequest(`/storage/v1/bucket${existing ? `/${bucket.id}` : ''}`, {
       method: existing ? 'PUT' : 'POST',
-      body: { ...(existing ? {} : { id: bucket.id, name: bucket.id }), public: bucket.public, file_size_limit: 204800, allowed_mime_types: bucket.types },
+      body: { ...(existing ? {} : { id: bucket.id, name: bucket.id }), public: bucket.public, file_size_limit: MAX_FILE_BYTES, allowed_mime_types: bucket.types },
     })
   }
-  console.log('Supabase tables, private resumes and public people buckets configured (200 KB maximum).')
+  console.log('Supabase tables, private resumes and public people buckets configured (500 KB maximum).')
 } finally {
   await client.end()
 }
