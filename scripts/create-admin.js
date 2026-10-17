@@ -1,53 +1,14 @@
-import { MongoClient } from 'mongodb'
-import bcrypt from 'bcryptjs'
 import dotenv from 'dotenv'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import bcrypt from 'bcryptjs'
+import { rows, insertRow } from '../src/lib/supabase.mjs'
 
-// Load environment variables
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-dotenv.config({ path: join(__dirname, '..', '.env.local') })
-
-async function createAdminUser() {
-  const client = new MongoClient(process.env.MONGODB_URI)
-  
-  try {
-    await client.connect()
-    const db = client.db('aequitas_law')
-    
-    // Check if any admin users already exist
-    const existingUser = await db.collection('users').findOne({})
-    if (existingUser) {
-      console.log('Admin user already exists')
-      return
-    }
-
-    // Create first admin user
-    const email = 'admin@aequitaslaw.com'
-    const password = 'admin123' // Change this to a secure password
-    
-    const salt = await bcrypt.genSalt(12)
-    const hashedPassword = await bcrypt.hash(password, salt)
-    
-    const result = await db.collection('users').insertOne({
-      email,
-      password: hashedPassword,
-      role: 'admin',
-      createdAt: new Date()
-    })
-
-    console.log('Admin user created successfully!')
-    console.log('Email:', email)
-    console.log('Password:', password)
-    console.log('User ID:', result.insertedId)
-    console.log('\nPlease change the password after first login.')
-    
-  } catch (error) {
-    console.error('Error creating admin user:', error)
-  } finally {
-    await client.close()
-  }
+dotenv.config({ path: '.env', quiet: true })
+const { ADMIN_EMAIL: email, ADMIN_PASSWORD: password } = process.env
+if (!email || !password || password.length < 8) throw new Error('Set ADMIN_EMAIL and ADMIN_PASSWORD (at least 8 characters)')
+if (email.toLowerCase() !== 'admin@alplaw.in') throw new Error('The super admin email must be admin@alplaw.in')
+if ((await rows('users', 'select=_id&limit=1')).length) {
+  console.log('An administrator already exists; use the admin screen to add users.')
+} else {
+  await insertRow('users', { name: 'ALP Admin', email: email.toLowerCase(), password: await bcrypt.hash(password, 12), role: 'super_admin' })
+  console.log('Administrator created.')
 }
-
-createAdminUser()

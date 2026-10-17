@@ -1,11 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { peopleData } from '@/data/people'
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation'
 
-export default function PeopleGrid() {
+export default function PeopleGrid({ peopleData }) {
   const [headerRef, headerVisible] = useScrollAnimation()
-  const { setRef, isVisible } = useStaggeredAnimation(6, { delay: 50 })
+  const { setRef, isVisible } = useStaggeredAnimation(peopleData.length, { delay: 50 })
 
   return (
     <section className="py-20 bg-white">

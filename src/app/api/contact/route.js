@@ -1,4 +1,5 @@
-import clientPromise from '@/lib/mongodb'
+import { authenticatedStaff } from '@/lib/admin.mjs'
+import { rows, insertRow } from '@/lib/supabase.mjs'
 import { getISTDate, formatISTDateForLog } from '../../../lib/dateUtils'
 
 export async function POST(request) {
@@ -23,11 +24,6 @@ export async function POST(request) {
       )
     }
 
-    // Connect to MongoDB
-    const client = await clientPromise
-    const db = client.db('aequitas_law')
-    const collection = db.collection('contacts')
-
     // Create contact document
     const contactData = {
       firstName,
@@ -36,18 +32,18 @@ export async function POST(request) {
       phone,
       subject,
       message,
-      createdAt: getISTDate(),
+      createdAt: new Date().toISOString(),
       status: 'new'
     }
 
-    // Insert into MongoDB
-    const result = await collection.insertOne(contactData)
+    // Save the contact
+    const result = await insertRow('contacts', contactData)
 
     return Response.json(
       { 
         success: true, 
         message: 'Contact form submitted successfully',
-        id: result.insertedId
+        id: result._id
       },
       { status: 201 }
     )
@@ -61,23 +57,11 @@ export async function POST(request) {
   }
 }
 
-export async function GET() {
+export async function GET(request) {
+  if (!(await authenticatedStaff(request))) return Response.json({ error: 'Unauthorized' }, { status: 401 })
   try {
-    const client = await clientPromise
-    const db = client.db('aequitas_law')
-    const collection = db.collection('contacts')
-
-    const contacts = await collection
-      .find({})
-      .sort({ createdAt: -1 })
-      .toArray()
-
-    return Response.json({ contacts })
-  } catch (error) {
-    console.error('Contact GET API error:', error)
-    return Response.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return Response.json({ contacts: await rows('contacts', 'order=createdAt.desc&limit=1000') })
+  } catch {
+    return Response.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

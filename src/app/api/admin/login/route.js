@@ -1,4 +1,4 @@
-import { connectToDatabase } from '../../../../lib/mongodb'
+import { rows } from '@/lib/supabase.mjs'
 import { verifyPassword, generateToken } from '../../../../lib/auth'
 import { NextResponse } from 'next/server'
 
@@ -13,11 +13,10 @@ export async function POST(request) {
       )
     }
 
-    const { db } = await connectToDatabase()
     
     // Find user
-    const user = await db.collection('users').findOne({ email })
-    if (!user) {
+    const user = (await rows('users', `email=eq.${encodeURIComponent(email)}&limit=1`))[0]
+    if (!user?.password) {
       return NextResponse.json(
         { success: false, message: 'Invalid credentials' },
         { status: 401 }

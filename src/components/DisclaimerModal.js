@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function DisclaimerModal() {
   const [isVisible, setIsVisible] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     // Check if user has already agreed to disclaimer and if it's still valid
@@ -47,7 +49,7 @@ export default function DisclaimerModal() {
     window.location.href = 'about:blank'
   }
 
-  if (!isVisible) return null
+  if (!isVisible || pathname?.startsWith('/admin')) return null
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center p-4 pt-8 overflow-y-auto">

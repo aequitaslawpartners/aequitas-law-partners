@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { MAX_FILE_BYTES } from '@/lib/uploadLimits.mjs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
@@ -29,6 +30,7 @@ export default function CareersPage() {
   }
 
   const handleFileChange = (event) => {
+    setSelectedFile(null)
     const file = event.target.files[0]
     if (file) {
       // Validate file type and size
@@ -36,8 +38,8 @@ export default function CareersPage() {
         setSubmitStatus({ type: 'error', message: 'Please upload a PDF file only.' })
         return
       }
-      if (file.size > 5 * 1024 * 1024) { // 5MB
-        setSubmitStatus({ type: 'error', message: 'File size should be less than 5MB. Maximum upload size is 5MB.' })
+      if (file.size > MAX_FILE_BYTES) { // 200 KB
+        setSubmitStatus({ type: 'error', message: 'Maximum upload size is 200 KB.' })
         return
       }
       setSelectedFile(file)
@@ -339,7 +341,7 @@ export default function CareersPage() {
                         <p className="mb-2 text-sm text-gray-500">
                           <span className="font-semibold">Click to upload</span> or drag and drop
                         </p>
-                        <p className="text-xs text-gray-500">PDF only (MAX. 5MB)</p>
+                        <p className="text-xs text-gray-500">PDF only (MAX. 200 KB)</p>
                       </div>
                       <input
                         id="resume"

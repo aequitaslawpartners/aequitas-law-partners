@@ -1,7 +1,10 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production'
+const getJwtSecret = () => {
+  if (!process.env.JWT_SECRET) throw new Error('JWT_SECRET is required')
+  return process.env.JWT_SECRET
+}
 
 export const hashPassword = async (password) => {
   const salt = await bcrypt.genSalt(12)
@@ -15,14 +18,14 @@ export const verifyPassword = async (password, hashedPassword) => {
 export const generateToken = (userId, email) => {
   return jwt.sign(
     { userId, email },
-    JWT_SECRET,
+    getJwtSecret(),
     { expiresIn: '24h' }
   )
 }
 
 export const verifyToken = (token) => {
   try {
-    return jwt.verify(token, JWT_SECRET)
+    return jwt.verify(token, getJwtSecret(), { algorithms: ['HS256'] })
   } catch (error) {
     return null
   }

@@ -2,8 +2,10 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import PeopleGrid from '@/components/PeopleGrid'
+import { getPeople } from '@/lib/people.mjs'
 
-export default function PeoplePage() {
+export default async function PeoplePage() {
+  const people = await getPeople()
   return (
     <div className="min-h-screen bg-white">
       <Banner />
@@ -23,7 +25,7 @@ export default function PeoplePage() {
         </section>
 
         {/* People Grid Section */}
-        <PeopleGrid />
+        <PeopleGrid peopleData={people} />
       </main>
       <Footer />
     </div>

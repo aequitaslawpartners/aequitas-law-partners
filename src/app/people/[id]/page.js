@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
-import { peopleData } from '@/data/people'
+import { getPerson } from '@/lib/people.mjs'
 import { practiceAreasData } from '@/data/practiceAreas'
 
 export default async function PersonPage({ params }) {
   const { id } = await params
-  const person = peopleData.find(p => p.id === id)
+  const person = await getPerson(id)
   
   if (!person) {
     notFound()
