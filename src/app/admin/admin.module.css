@@ -20,3 +20,9 @@
 .customExpertise{display:flex;gap:8px;margin-top:12px;align-items:center}.customExpertise .input{flex:1;min-width:0}.customExpertise button{flex-shrink:0}
 
 .expertiseOptions label{min-width:0;overflow-wrap:anywhere}
+
+.inlineSpinner{display:inline-block;width:14px;height:14px;flex-shrink:0;border-color:currentColor;border-right-color:transparent;vertical-align:middle}
+.rotating{animation:spin .8s linear infinite}
+.actionStatus{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:10px;padding:13px 20px;border:1px solid #d7e1ee;border-radius:9px;background:#fff;color:#244263;box-shadow:0 8px 32px #10294b24;font-size:12px;white-space:nowrap;pointer-events:none}
+.formFields{border:0;padding:0;margin:0;min-width:0}
+@media(prefers-reduced-motion:reduce){.spinner,.rotating{animation-duration:2s}}

@@ -105,6 +105,13 @@ snapshot is needed. Legacy local People photos and vCards are retained as backup
 The website reads profiles from `users`, displays Storage photos, and generates
 vCards from the current users row; it does not use those legacy backup copies.
 
+Admin requests display a shared loading indicator; sign-in, saves, refresh and
+password changes also animate their controls. Actions remain disabled until their
+request and data refresh finish. Successful edits, role changes, photo uploads,
+password updates, status changes and deletions reload the current workspace data.
+Failed/partial bulk deletions also reload, and saved forms close with a separate
+refresh warning if loading the latest data fails, preventing duplicate resubmission.
+
 The original MongoDB copy remains untouched. Some migrated applications have
 `resumeMigrationIssue` because their original PDF was invalid or exceeded 200 KB;
 obtain compliant replacements before retiring that external copy. Obsolete MongoDB
