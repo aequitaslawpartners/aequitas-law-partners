@@ -24,7 +24,7 @@ export default function PeopleGrid() {
             <Link 
               key={person.id}
               href={`/people/${person.id}`}
-              className="group"
+              className="group w-full"
             >
               <div 
                 ref={setRef(index)}
@@ -72,7 +72,8 @@ export default function PeopleGrid() {
                 </div>
               </div>
             </Link>
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>

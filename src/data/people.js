@@ -120,9 +120,9 @@ export const peopleData = [
   {
     id: "abhishek-pai",
     name: "Abhishek Pai",
-    designation: "Partner",
+    designation: "Founding Partner",
     email: "abhishek.pai@alplaw.in",
-    image: "/people/Abhishek Pai - Partner.png",
+    image: "/people/Abhishek Pai - Founding Partner.png",
     linkedin: "linkedin.com/in/abhishek-pai-303720118/",
     vcard: "/vcards/abhishek-pai.vcf",
     bio: "Abhishek Pai is a seasoned corporate counsel and qualified Company Secretary whose practice bridges strategic advisory and courtroom advocacy. He has guided listed companies and international investors on governance, regulatory compliance, and complex cross-border transactions. A former litigator before Mumbai’s trial courts and the appellate courts, Abhishek handled commercial disputes, from fraud and inter-promoter conflicts to succession and investor litigation, bringing those insights to his transactional work.<br><br> At Aequitas Law Partners, he structures and executes venture capital and private equity deals, scheme-based mergers (NCLT-sanctioned), joint ventures, demergers, asset and share acquisitions. He also advises on hotel management and ISDA agreements, and ensures robust SEBI, RBI and RoC compliance. <br><br> Abhishek’s sector-agnostic expertise spans mining, pharmaceuticals, fintech, IT, hospitality, real estate, infrastructure, power and manufacturing sectors, gaming, logistics, banking and payments, industrial procurement, human resource management, textile, industrial automation and beyond, making him a trusted advisor in high-stakes transactions.",
@@ -235,5 +235,28 @@ export const peopleData = [
     memberships: [
       "Member of Bar Council of Maharashtra and Goa",
     ]
-  }
+  },
+  {
+    id: "anku-adhikari",
+    name: "Anku Adhikari",
+    designation: "Principal Associate",
+    email: "anku.adhikari@alplaw.in",
+    linkedin: "linkedin.com/in/anku-adhikari-6814131bb",
+    vcard: "/vcards/anku-adhikari.vcf",
+    image: "/people/Anku Adhikari - Principal Associate.png",
+    bio: "Anku Adhikari is a part of the Investment Funds, Asset Management & Regulatory Practice Team at Aequitas Law Partners with experience in advising fund managers.<br><br> She assists fund managers across the entire lifecycle of a fund, including setting up and registration of funds, capital raising, implementation of carried interest structures, offering co-investment arrangements, navigating regulatory actions, managing investor disputes and winding up of funds. She has advised funds across a wide range of strategies, including private equity, venture capital, fund-of-funds, angel funds, real estate and debt funds, as well as listed market long-only and hedge funds. <br><br> She regularly advises on fund documentation, investor negotiations, regulatory strategy and ongoing compliance with SEBI and IFSCA. She also has significant experience in advising on the structuring of funds based out of the International Financial Services Centre (IFSC) at GIFT City, as well as India-focused offshore funds established in jurisdictions such as Singapore and Mauritius. <br><br> She brings a nuanced understanding of SEBI’s evolving regulatory framework for AIFs and related intermediaries and is recognised for her practical and commercially oriented approach to fund structuring and compliance.",    
+    expertise: [
+      "Investment Funds, Asset Management and Regulatory Practice",
+      "General Corporate & Commercial Advisory",
+    ],
+    education: [
+      "B.A. LL.B. (Hons.) from NALSAR University of Law, Hyderabad (Class of 2021)",
+    ],
+    experience: "1 year",
+    languages: ["English", "Hindi", "Nepali"],
+    publications: [ ],
+    achievements: [],
+    personalNote: "Apart from my work, I am a true crime enthusiast and follow national, business and international affairs. When I step away from work, one will find me in the mountains, where the air is clear and the deadlines, for once, can wait.",
+    memberships: [ ]
+  },
 ]
